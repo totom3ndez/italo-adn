@@ -1,22 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
+
+function submit_search(event) {
+	event.preventDefault()
+}
 ---
 
 <Layout title="Italo Adn">
 	<Header />
-	<nav class="flex justify-around bg-[#333] p-4">
+	<nav class="grid grid-cols-6 items-center bg-[#333] p-4 px-10">
 		<img class="h-[75px] w-[75px]" src="./logo.png" alt="Logo de Italo ADN" />
-		<ul class="flex gap-4">
-			<li>Inicio</li>
-			<li>Blog</li>
-			<li>Servicios</li>
-			<li>Nosotros</li>
-			<li>Contacto</li>
+		<ul class="col-span-4 flex justify-center gap-4 text-[#fff]">
+			<a href="#">Inicio</a>
+			<a href="#">Blog</a>
+			<a href="#">Servicios</a>
+			<a href="#">Nosotros</a>
+			<a href="#">Contacto</a>
 		</ul>
-		<form action="search">
-			<input type="search" id="" />
-			<input type="submit" value="Buscar" />
+		<form onsubmit="preventDefault()" class="flex h-9 gap-3" action="search">
+			<input class="p-2 placeholder:p-2" type="search" placeholder="Ciudadania ...." />
 		</form>
 	</nav>
 	<main>
