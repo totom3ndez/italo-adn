@@ -1,0 +1,30 @@
+---
+import Mail from '../components/icons/mail.astro'
+import Whatsapp from '../components/icons/whatsapp.astro'
+import Coffee from '../components/icons/coffee.astro'
+
+// styles
+
+const header_links = 'underline-offset-4 hover:underline'
+---
+
+<header class="bg-primary flex grid-cols-3 justify-center gap-6 p-3 text-[#fff]">
+	<div class="flex gap-2">
+		<Coffee />
+		<a href="https://cafecito.app/totomendez" rel="noopener" target="_blank" class={header_links}
+			>Invitanos un Cafecito</a
+		>
+	</div>
+	<span aria-hidden="true">|</span>
+	<div class="flex gap-2">
+		<Whatsapp />
+		<a href="https://api.whatsapp.com/send?phone=34674644584" target="_blank" class={header_links}
+			>Hablanos al Whatsapp</a
+		>
+	</div>
+	<span aria-hidden="true">|</span>
+	<div class="flex gap-2">
+		<Mail />
+		<a href="mailto:italoadn.ok@gmail.com" class={header_links}>italoadn.ok@gmail.com</a>
+	</div>
+</header>

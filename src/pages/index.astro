@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+---
+
+<Layout title="Italo Adn">
+	<Header />
+	<nav class="flex justify-around bg-[#333] p-4">
+		<img class="h-[75px] w-[75px]" src="./logo.png" alt="Logo de Italo ADN" />
+		<ul class="flex gap-4">
+			<li>Inicio</li>
+			<li>Blog</li>
+			<li>Servicios</li>
+			<li>Nosotros</li>
+			<li>Contacto</li>
+		</ul>
+		<form action="search">
+			<input type="search" id="" />
+			<input type="submit" value="Buscar" />
+		</form>
+	</nav>
+	<main>
+		<h1>Italo ADN</h1>
+	</main>
+</Layout>
