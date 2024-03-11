@@ -5,7 +5,10 @@ interface Props {
 
 const { title } = Astro.props
 
+import Header from '../components/Header.astro'
+import Navbar from '../components/Navbar.astro'
 import '@fontsource-variable/playpen-sans'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 ---
 
 <!doctype html>
@@ -17,13 +20,21 @@ import '@fontsource-variable/playpen-sans'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body>
+	<body class="bg-darkGreen">
+		<Header />
+		<Navbar />
 		<slot />
+		<style is:global>
+			body {
+				font-family: 'Playpen Sans Variable', cursive;
+			}
+
+			img,
+			video {
+				width: inherit;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	body {
-		font-family: 'Playpen Sans Variable', cursive;
-	}
-</style>

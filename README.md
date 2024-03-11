@@ -21,10 +21,8 @@ Estamos comprometidos en hacer que este proceso sea lo más fluido posible para 
 Cómo Contribuir
 Si deseas contribuir a esta página o tienes sugerencias para mejorarla, ¡estamos abiertos a colaboraciones! Aquí hay algunas formas en las que puedes ayudar:
 
-Reportar Errores: Si encuentras algún error o información desactualizada, por favor abre un issue en este repositorio.
-Agregar Contenido: Si tienes conocimientos adicionales sobre el proceso de ciudadanía italiana o recursos útiles, considera agregarlos a la página.
-Mejorar el Diseño: Si eres diseñador o tienes habilidades en diseño web, tus ideas para mejorar la apariencia y la usabilidad son bienvenidas.
-Contacto
-Para obtener más información o para solicitar nuestros servicios, visita nuestra página oficial o contáctanos por correo electrónico a info@gestoresitalianos.com.
+~ Reportar Errores: Si encuentras algún error o información desactualizada, por favor abre un issue en este repositorio.
+~ Agregar Contenido: Si tienes conocimientos adicionales sobre el proceso de ciudadanía italiana o recursos útiles, considera agregarlos a la página.
+~ Mejorar el Diseño: Si eres diseñador o tienes habilidades en diseño web, tus ideas para mejorar la apariencia y la usabilidad son bienvenidas.
 
 ¡Gracias por confiar en nosotros para ayudarte en tu búsqueda de la ciudadanía italiana! 🇮🇹

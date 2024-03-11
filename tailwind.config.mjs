@@ -2,11 +2,15 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		colors: {
-			primary: '#91354e',
-			secondary: '#25282b'
-		},
-		extend: {}
+		extend: {
+			colors: {
+				darkGreen: '#5c6e6c',
+				lightGreen: '#a6b7aa',
+				yellow: '#d2a96a',
+				lightRed: '#d39d87',
+				darkRed: '#bb7154'
+			}
+		}
 	},
 	plugins: []
 }

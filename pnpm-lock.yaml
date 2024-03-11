@@ -7,6 +7,9 @@ dependencies:
   '@fontsource-variable/playpen-sans':
     specifier: ^5.0.3
     version: 5.0.3
+  '@fontsource/berkshire-swash':
+    specifier: ^5.0.19
+    version: 5.0.19
   astro:
     specifier: ^4.4.15
     version: 4.4.15
@@ -544,6 +547,10 @@ packages:
 
   /@fontsource-variable/playpen-sans@5.0.3:
     resolution: {integrity: sha512-l1w1aIAGN7Yj7nLVSUYcf74eaPOJKq188Qaz63axzGD/WFSO50tCxrgF0U8fCL83sm12nbgU0Hy3ymESAu4p3w==}
+    dev: false
+
+  /@fontsource/berkshire-swash@5.0.19:
+    resolution: {integrity: sha512-/uc1W1+YSF8Dp+01w0aWkuXJcIOIOVwFkUsVD+7tOjjp7plM+Apzf4khK+7C4whlaioQuz2NNk22BNmBGzpmYg==}
     dev: false
 
   /@isaacs/cliui@8.0.2:

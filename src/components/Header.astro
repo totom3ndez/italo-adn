@@ -5,26 +5,28 @@ import Coffee from '../components/icons/coffee.astro'
 
 // styles
 
-const header_links = 'underline-offset-4 hover:underline'
+const header_links = 'flex gap-3 hover:text-darkGreen'
 ---
 
-<header class="bg-primary flex grid-cols-3 justify-center gap-6 p-3 text-[#fff]">
+<header class="bg-lightGreen flex grid-cols-3 justify-center gap-6 p-3 text-[#fff]">
 	<div class="flex gap-2">
-		<Coffee />
-		<a href="https://cafecito.app/totomendez" rel="noopener" target="_blank" class={header_links}
-			>Invitanos un Cafecito</a
-		>
+		<a href="https://cafecito.app/totomendez" rel="noopener" target="_blank" class={header_links}>
+			<Coffee />
+			<span class="hidden md:block">Invitanos un Cafecito</span>
+		</a>
 	</div>
 	<span aria-hidden="true">|</span>
 	<div class="flex gap-2">
-		<Whatsapp />
-		<a href="https://api.whatsapp.com/send?phone=34674644584" target="_blank" class={header_links}
-			>Hablanos al Whatsapp</a
-		>
+		<a href="https://api.whatsapp.com/send?phone=34674644584" target="_blank" class={header_links}>
+			<Whatsapp />
+			<span class="hidden md:block">Hablanos al Whatsapp</span>
+		</a>
 	</div>
 	<span aria-hidden="true">|</span>
 	<div class="flex gap-2">
-		<Mail />
-		<a href="mailto:italoadn.ok@gmail.com" class={header_links}>italoadn.ok@gmail.com</a>
+		<a href="mailto:italoadn.ok@gmail.com" class={header_links}>
+			<Mail />
+			<span class="hidden md:block">italoadn.ok@gmail.com</span>
+		</a>
 	</div>
 </header>
