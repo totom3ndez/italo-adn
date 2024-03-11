@@ -1,0 +1,91 @@
+<nav
+	transition:persist
+	class="bg-darkGreen relative flex items-center justify-between gap-12 p-4 px-10 md:justify-center"
+>
+	<a href="/">
+		<img class="h-[75px] w-[75px]" src="./logo.png" alt="Logo de Italo ADN" />
+	</a>
+	<button class="opener hover:bg-lightGreen rounded-lg p-2 md:hidden">
+		<svg
+			class="text-[#fff] md:hidden"
+			width="30"
+			height="30"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 6l16 0"></path><path
+				d="M4 12l16 0"></path><path d="M4 18l16 0"></path></svg
+		>
+	</button>
+	<ul
+		class:list={[
+			'nav-links align-center bg-darkGreen absolute right-0 top-10 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl text-[#fff] transition ease-in-out',
+			'md:static md:flex md:w-auto md:flex-row md:gap-12 md:opacity-100'
+		]}
+	>
+		<button
+			class="closer hover:bg-lightGreen mx-auto flex w-fit justify-center rounded-lg p-2 md:hidden"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="30"
+				height="30"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"
+				></path><path d="M6 6l12 12"></path></svg
+			>
+		</button>
+		<a
+			class="hover:bg-lightGreen nav-link md:hover:bg-darkGreen md:hover:text-lightRed w-full rounded-t-2xl border py-4 text-center md:border-none md:text-lg"
+			href="/">Inicio</a
+		>
+		<a
+			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			href="/blog">Blog</a
+		>
+		<a
+			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			href="/services">Servicios</a
+		>
+		<a
+			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			href="/about">Nosotros</a
+		>
+		<a
+			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full rounded-b-2xl border border-t-0 py-4 text-center md:border-none md:text-lg"
+			href="/contact">Contacto</a
+		>
+	</ul>
+</nav>
+<style>
+	nav {
+		box-shadow: 0px 6px 15px -6px rgba(0, 0, 0, 1);
+	}
+</style>
+
+<script>
+	const opener = document.querySelector('.opener')
+	const closer = document.querySelector('.closer')
+	const navLink = document.querySelectorAll('.nav-link')
+	function toggler() {
+		document.querySelector('.nav-links').classList.toggle('hidden')
+	}
+	opener.addEventListener('click', toggler)
+	closer.addEventListener('click', toggler)
+
+	function togglerlink() {
+		document.querySelector('.nav-links').classList.add('hidden')
+	}
+
+	navLink.forEach((item) => {
+		item.addEventListener('click', togglerlink)
+	})
+</script>
