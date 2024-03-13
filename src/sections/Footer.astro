@@ -1,20 +1,23 @@
 ---
-const linkStyle = 'md:hover:text-lightRed text-white uppercase'
+const linkStyle = 'md:hover:text-lightRed text-white uppercase text-xs md:text-md'
 const colStyle = 'blog-links flex flex-col gap-4'
 ---
 
-<div class="mx-auto flex h-80 max-w-7xl flex-col pt-8 md:flex-row md:justify-around">
+<section
+	class="flex h-80 max-w-7xl justify-center gap-4 pt-8 text-sm md:mx-auto md:flex-row md:justify-around"
+>
 	<div class={colStyle}>
 		<a class={linkStyle} href="#">Ciudadanía italiana</a>
 		<a class={linkStyle} href="#">Residencia en Italia</a>
 		<a class={linkStyle} href="#">Codice fiscale</a>
 		<a class={linkStyle} href="#">Declaración de presencia</a>
 		<a class={linkStyle} href="#">Carta de identidad</a>
+		<a class={linkStyle} href="#">Pasaporte</a>
 	</div>
 	<div class={colStyle}>
-		<a class={linkStyle} href="#">Ciudadanía</a>
-		<a class={linkStyle} href="#">Codice</a>
-		<a class={linkStyle} href="#">Pec</a>
-		<a class={linkStyle} href="#">Declaración</a>
+		<a class={linkStyle} href="#">Quienes somos</a>
+		<a class={linkStyle} href="#">Servicios</a>
+		<a class={linkStyle} href="#">Contacto</a>
+		<a class={linkStyle} href="#">Cookies y privacidad</a>
 	</div>
-</div>
+</section>

@@ -1,0 +1,42 @@
+---
+const inputStyle =
+	'rounded-lg placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
+---
+
+<section>
+	<div
+		class="mx-auto flex max-w-lg flex-col gap-3 rounded-lg border-none bg-lightGreen p-10 text-white shadow-2xl"
+	>
+		<h2 class="text-center text-4xl font-bold">Contáctenos</h2>
+		<p class="text-center">
+			Si tienes alguna duda o pregunta, no dudes en mandarnos un mensaje. Estaremos encantados de
+			ayudarte y te responderemos lo antes posible. 😊
+		</p>
+		<form class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg" action="">
+			<input class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" />
+			<input class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" />
+			<input
+				class={inputStyle}
+				placeholder="Asunto"
+				type="text"
+				name="subject"
+				id="input_subject"
+			/>
+			<textarea
+				class={inputStyle}
+				placeholder="Tu mensaje... "
+				name="message"
+				id="input_message"
+				cols="30"
+				rows="10"></textarea>
+			<input class:list={[inputStyle, 'text-white']} type="submit" value="Enviar" />
+		</form>
+	</div>
+</section>
+
+<style>
+	section {
+		background-image: url('./pattern.svg');
+		background-size: 200px;
+	}
+</style>
