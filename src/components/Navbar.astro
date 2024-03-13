@@ -1,11 +1,11 @@
 <nav
 	transition:persist
-	class="bg-darkGreen relative flex items-center justify-between gap-12 p-4 px-10 md:justify-center"
+	class="relative flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 md:justify-center"
 >
 	<a href="/">
 		<img class="h-[75px] w-[75px]" src="./logo.png" alt="Logo de Italo ADN" />
 	</a>
-	<button class="opener hover:bg-lightGreen rounded-lg p-2 md:hidden">
+	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden">
 		<svg
 			class="text-[#fff] md:hidden"
 			width="30"
@@ -22,12 +22,12 @@
 	</button>
 	<ul
 		class:list={[
-			'nav-links align-center bg-darkGreen absolute right-0 top-10 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl text-[#fff] transition ease-in-out',
+			'nav-links align-center absolute right-0 top-10 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl bg-darkGreen text-[#fff] transition ease-in-out',
 			'md:static md:flex md:w-auto md:flex-row md:gap-12 md:opacity-100'
 		]}
 	>
 		<button
-			class="closer hover:bg-lightGreen mx-auto flex w-fit justify-center rounded-lg p-2 md:hidden"
+			class="closer mx-auto flex w-fit justify-center rounded-lg p-2 hover:bg-lightGreen md:hidden"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -44,23 +44,23 @@
 			>
 		</button>
 		<a
-			class="hover:bg-lightGreen nav-link md:hover:bg-darkGreen md:hover:text-lightRed w-full rounded-t-2xl border py-4 text-center md:border-none md:text-lg"
+			class="nav-link w-full rounded-t-2xl border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/">Inicio</a
 		>
 		<a
-			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/blog">Blog</a
 		>
 		<a
-			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/services">Servicios</a
 		>
 		<a
-			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full border border-t-0 py-4 text-center md:border-none md:text-lg"
+			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/about">Nosotros</a
 		>
 		<a
-			class="nav-link hover:bg-lightGreen md:hover:bg-darkGreen w-full rounded-b-2xl border border-t-0 py-4 text-center md:border-none md:text-lg"
+			class="nav-link w-full rounded-b-2xl border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/contact">Contacto</a
 		>
 	</ul>
