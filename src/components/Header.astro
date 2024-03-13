@@ -10,21 +10,36 @@ const header_links = 'flex gap-3 hover:text-darkGreen'
 
 <header class="flex grid-cols-3 justify-center gap-6 bg-lightGreen p-3 text-[#fff]">
 	<div class="flex gap-2">
-		<a href="https://cafecito.app/totomendez" rel="noopener" target="_blank" class={header_links}>
+		<a
+			aria-label="Botón para aportar a nuestra pagina web "
+			href="https://cafecito.app/totomendez"
+			rel="noopener"
+			target="_blank"
+			class={header_links}
+		>
 			<Coffee />
 			<span class="hidden md:block">Invítanos un Cafecito</span>
 		</a>
 	</div>
 	<span aria-hidden="true">|</span>
 	<div class="flex gap-2">
-		<a href="https://api.whatsapp.com/send?phone=34674644584" target="_blank" class={header_links}>
+		<a
+			aria-label="Botón para escribir al whatsapp"
+			href="https://api.whatsapp.com/send?phone=34674644584"
+			target="_blank"
+			class={header_links}
+		>
 			<Whatsapp />
 			<span class="hidden md:block">Hablanos al Whatsapp</span>
 		</a>
 	</div>
 	<span aria-hidden="true">|</span>
 	<div class="flex gap-2">
-		<a href="mailto:italoadn.ok@gmail.com" class={header_links}>
+		<a
+			aria-label="Botón para enviarnos un email"
+			href="mailto:italoadn.ok@gmail.com"
+			class={header_links}
+		>
 			<Mail />
 			<span class="hidden md:block">italoadn.ok@gmail.com</span>
 		</a>

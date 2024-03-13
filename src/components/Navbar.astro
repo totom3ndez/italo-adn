@@ -5,7 +5,7 @@
 	<a href="/">
 		<img class="h-[75px] w-[75px]" src="/logo.png" alt="Logo de Italo ADN" />
 	</a>
-	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden">
+	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
 		<svg
 			class="text-[#fff] md:hidden"
 			width="30"
@@ -21,12 +21,13 @@
 		>
 	</button>
 	<ul
+		aria-label="Menu navegador"
 		class:list={[
 			'nav-links align-center absolute right-0 top-6 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl bg-darkGreen text-[#fff] transition ease-in-out',
 			'md:static md:flex md:w-auto md:flex-row md:gap-12 md:opacity-100'
 		]}
 	>
-		<button class="grid place-content-end hover:cursor-default">
+		<button class="grid place-content-end hover:cursor-default" aria-label="Menu closer">
 			<svg
 				class="closer h-auto w-[50px] rounded-lg p-2 hover:cursor-pointer hover:bg-lightGreen md:hidden"
 				xmlns="http://www.w3.org/2000/svg"
@@ -43,22 +44,27 @@
 			>
 		</button>
 		<a
+			aria-label="Inicio"
 			class="nav-link w-full rounded-t-2xl border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/">Inicio</a
 		>
 		<a
+			aria-label="Blog"
 			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/blog">Blog</a
 		>
 		<a
+			aria-label="Servicios"
 			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/services">Servicios</a
 		>
 		<a
+			aria-label="Nosotros"
 			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/about">Nosotros</a
 		>
 		<a
+			aria-label="Contacto"
 			class="nav-link w-full rounded-b-2xl border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 			href="/contact">Contacto</a
 		>
