@@ -3,7 +3,7 @@
 	class="relative flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 md:justify-center"
 >
 	<a href="/">
-		<img class="h-[75px] w-[75px]" src="./logo.png" alt="Logo de Italo ADN" />
+		<img class="h-[75px] w-[75px]" src="/logo.png" alt="Logo de Italo ADN" />
 	</a>
 	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden">
 		<svg
@@ -22,14 +22,13 @@
 	</button>
 	<ul
 		class:list={[
-			'nav-links align-center absolute right-0 top-10 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl bg-darkGreen text-[#fff] transition ease-in-out',
+			'nav-links align-center absolute right-0 top-6 z-20 flex hidden w-1/2 flex-col justify-center rounded-2xl bg-darkGreen text-[#fff] transition ease-in-out',
 			'md:static md:flex md:w-auto md:flex-row md:gap-12 md:opacity-100'
 		]}
 	>
-		<button
-			class="closer mx-auto flex w-fit justify-center rounded-lg p-2 hover:bg-lightGreen md:hidden"
-		>
+		<button class="grid place-content-end hover:cursor-default">
 			<svg
+				class="closer h-auto w-[50px] rounded-lg p-2 hover:cursor-pointer hover:bg-lightGreen md:hidden"
 				xmlns="http://www.w3.org/2000/svg"
 				width="30"
 				height="30"

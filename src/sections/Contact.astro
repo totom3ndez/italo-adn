@@ -1,6 +1,7 @@
 ---
 const inputStyle =
 	'rounded-lg placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
+import Button from '../components/Button.astro'
 ---
 
 <section>
@@ -23,20 +24,20 @@ const inputStyle =
 				id="input_subject"
 			/>
 			<textarea
-				class={inputStyle}
+				class:list={[inputStyle, 'resize-none	']}
 				placeholder="Tu mensaje... "
 				name="message"
 				id="input_message"
 				cols="30"
 				rows="10"></textarea>
-			<input class:list={[inputStyle, 'text-white']} type="submit" value="Enviar" />
+			<Button type="submit">Enviar</Button>
 		</form>
 	</div>
 </section>
 
 <style>
 	section {
-		background-image: url('./pattern.svg');
+		background-image: url('/pattern.svg');
 		background-size: 200px;
 	}
 </style>
