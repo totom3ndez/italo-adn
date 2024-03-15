@@ -2,23 +2,6 @@
 const inputStyle =
 	'rounded-lg placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
 import Button from '../components/Button.astro'
-
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const name = data.get("firstName");
-    const email = data.get("email");
-    const subject = data.get("subject");
-    const message = data.get("message");
-    // Do something with the data
-	console.log(name, email, subject, message)
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
-}
-
 ---
 
 <section id='contact'>
@@ -27,12 +10,10 @@ if (Astro.request.method === "POST") {
 	>
 		<h2 class="text-center text-4xl font-bold">Contáctenos</h2>
 		<p class="text-center">
-			Si tienes alguna duda o pregunta, no dudes en mandarnos un mensaje. Estaremos encantados de
-			ayudarte y te responderemos lo antes posible. 😊
+		Utilizá este formulario para escribirnos al Whatsapp y despejar cualquiera de tus dudas.	
 		</p>
-		<form method="post" class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg">
+		<form id="form" class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg">
 			<input name='firstName' autocomplete="given-name" class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" required />
-			<input name="email" autocomplete="email" class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" required />
 			<input
 				name="subject"
 				class={inputStyle}
@@ -50,7 +31,7 @@ if (Astro.request.method === "POST") {
 				id="input_message"
 				cols="30"
 				rows="10"></textarea>
-			<Button type="submit">Enviar</Button>
+			<Button type="submit">Enviar Whatsapp</Button>
 		</form>
 	</div>
 </section>
