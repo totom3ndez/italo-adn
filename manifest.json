@@ -1,15 +1,41 @@
 {
 	"short_name": "Italo ADN",
 	"name": "Italo ADN - Ciudadanía Italiana",
-	"start_url": "https://italoadn.netlify.app",
-	"display": "browser",
+	"start_url": "/",
+	"id": "/",
+	"display_override": ["browser", "minimal-ui"],
+	"display": "standalone",
 	"scope": "/",
 	"description": "Pagina oficial de Italo ADN - Encuentra todo lo relacionado a el tramite de la Ciudadanía Italiana en Argentina y en Italia",
 	"icons": [
 		{
-			"src": "/public/logo.webp",
+			"src": "/logo.webp",
 			"type": "image/webp",
-			"size": "75x75"
+			"sizes": "75x75"
+		},
+		{
+			"src": "/logo-brand-150x150.png",
+			"type": "image/png",
+			"sizes": "150x150"
+		},
+		{
+			"src": "/logo-brand-300x300.png",
+			"type": "image/png",
+			"sizes": "300x300"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "/mobile-screenshot.png",
+			"type": "image/png",
+			"sizes": "576x914",
+			"form_factor": "narrow"
+		},
+		{
+			"src": "/desktop-screenshot.png",
+			"type": "image/png",
+			"sizes": "1920x918",
+			"form_factor": "wide"
 		}
 	]
 }
