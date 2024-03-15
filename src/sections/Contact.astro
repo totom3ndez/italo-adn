@@ -13,9 +13,9 @@ import Button from '../components/Button.astro'
 			Si tienes alguna duda o pregunta, no dudes en mandarnos un mensaje. Estaremos encantados de
 			ayudarte y te responderemos lo antes posible. 😊
 		</p>
-		<form class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg" action="">
-			<input class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" />
-			<input class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" />
+		<form class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg" action="POST">
+			<input required class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" />
+			<input required class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" />
 			<input
 				class={inputStyle}
 				placeholder="Asunto"
@@ -23,7 +23,7 @@ import Button from '../components/Button.astro'
 				name="subject"
 				id="input_subject"
 			/>
-			<textarea
+			<textarea required
 				class:list={[inputStyle, 'resize-none	']}
 				placeholder="Tu mensaje... "
 				name="message"
