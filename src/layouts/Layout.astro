@@ -20,6 +20,7 @@ import '@fontsource-variable/playpen-sans'
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link
+			fetchpriority="high"
 			rel="preload"
 			href="https://cdn.jsdelivr.net/fontsource/fonts/playpen-sans:vf@latest/latin-wght-normal.woff2"
 			as="font"
@@ -30,6 +31,7 @@ import '@fontsource-variable/playpen-sans'
 		<link fetchpriority="high" rel="preload" as="image" href="/background-1.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/logo.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/logo-white.webp" />
+		<link fetchpriority="high" rel="preload" as="image" href="/pattern.svg" />
 
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
