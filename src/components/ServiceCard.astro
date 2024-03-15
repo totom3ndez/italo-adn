@@ -1,9 +1,11 @@
 ---
 const {service, details, price=''} = Astro.props
+import Button from "./Button.astro"
 ---
 
-<div class="h-12 p-4 shadow-lg bg-lightGreen">
-<h3>{service}</h3>
-<p>{details}</p>
+<div class="flex flex-col gap-3 m-auto max-w-72 p-12 shadow-lg bg-lightGreen rounded-lg">
+<h3 class="text-darkRed text-xl">{service}</h3>
+<p class="text-sm">{details}</p>
 <span>{price}</span>
+<Button>Consultar precio</Button>
 </div>
