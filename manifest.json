@@ -1,0 +1,15 @@
+{
+	"short_name": "Italo ADN",
+	"name": "Italo ADN - Ciudadanía Italiana",
+	"start_url": "https://italoadn.netlify.app",
+	"display": "browser",
+	"scope": "/",
+	"description": "Pagina oficial de Italo ADN - Encuentra todo lo relacionado a el tramite de la Ciudadanía Italiana en Argentina y en Italia",
+	"icons": [
+		{
+			"src": "/public/logo.webp",
+			"type": "image/webp",
+			"size": "75x75"
+		}
+	]
+}
