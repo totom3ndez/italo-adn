@@ -8,7 +8,8 @@ export default {
 				lightGreen: '#a6b7aa',
 				yellow: '#d2a96a',
 				lightRed: '#d39d87',
-				darkRed: '#bb7154'
+				darkRed: '#bb7154',
+				greenWp: '#25D366'
 			}
 		}
 	},

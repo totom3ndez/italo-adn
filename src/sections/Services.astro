@@ -1,12 +1,24 @@
 ---
-import ServiceCard from "../components/ServiceCard.astro"
+import ServiceCard from '../components/ServiceCard.astro'
 ---
 
-
-<section id="services" class="h-auto py-20 w-full">
-    <div class="flex flex-col md:flex-row gap-4 justify-center w-fit mx-auto">
-        <ServiceCard service="Asesoria" details="Te brindamos asesoria en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"/>
-        <ServiceCard service="Asesoria" details="Te brindamos asesoria en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"/>
-        <ServiceCard service="Asesoria" details="Te brindamos asesoria en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"/>
-    </div>
+<section id="services" class="h-auto w-full py-40">
+	<div class="mx-auto flex w-fit flex-col justify-center gap-4 md:flex-row">
+		<ServiceCard
+			service="Asesoría"
+			details="Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"
+			button="Consultar precio"
+		/>
+		<ServiceCard
+			service="Traducciones"
+			details="Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"
+			button="Consultar precio"
+		/>
+		<ServiceCard
+			service="Arbologico"
+			details="Esta herramienta creada 100% por nosotros te ayuda a crear tu árbol genealogico y asi tener en claro tus antepasados."
+			button="Ingresar a la APP"
+			hrefButton="https://totom3ndez.github.io/Arbologico/"
+		/>
+	</div>
 </section>

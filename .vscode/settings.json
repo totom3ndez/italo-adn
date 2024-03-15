@@ -2,5 +2,13 @@
 	"cSpell.language": "en,es-ES,es,lorem,it",
 	"cSpell.enableFiletypes": ["astro"],
 	"cSpell.enabled": true,
-	"cSpell.words": ["Cafecito", "Hablanos", "Loli", "noopener", "whatsapp"]
+	"cSpell.words": [
+		"Arbologico",
+		"Cafecito",
+		"Hablanos",
+		"Loli",
+		"noopener",
+		"novalidate",
+		"whatsapp"
+	]
 }
