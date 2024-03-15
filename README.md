@@ -1,12 +1,12 @@
 # Página Oficial de Italo ADN
 
-Bienvenidos a la página oficial de los Gestores de Ciudadanía Italiana. Aquí encontrarás información valiosa y servicios relacionados con el proceso de obtener la ciudadanía italiana. Nuestro equipo de expertos está comprometido en ayudarte a navegar por este emocionante camino hacia la ciudadanía italiana.
+Bienvenidos a la página oficial de los Italo ADN. Aquí encontrarás información valiosa y servicios relacionados con el proceso de obtener la ciudadanía italiana. Nuestro equipo de expertos está comprometido en ayudarte a navegar por este emocionante camino hacia la ciudadanía italiana.
 
 # Servicios Ofrecidos
 
 ### Asesoramiento Personalizado:
 
-Nuestros gestores altamente capacitados te guiarán a lo largo de todo el proceso. Desde la recopilación de documentos hasta la presentación de la solicitud, estamos aquí para responder a tus preguntas y brindarte orientación.
+Te guiaremos a lo largo de todo el proceso. Desde la recopilación de documentos hasta la presentación de la solicitud, estamos aquí para responder a tus preguntas y brindarte orientación.
 Ofrecemos consultas individuales para abordar tus necesidades específicas y resolver cualquier inquietud que puedas tener.
 
 ### Traducciones Certificadas:
