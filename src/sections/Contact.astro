@@ -14,16 +14,17 @@ import Button from '../components/Button.astro'
 			ayudarte y te responderemos lo antes posible. 😊
 		</p>
 		<form class="mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg" action="POST">
-			<input class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" required autocomplete/>
-			<input class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" required autocomplete/>
+			<input name='firstName' autocomplete="given-name" class={inputStyle} placeholder="Nombre " type="text" name="name" id="input_name" required />
+			<input name="email" autocomplete="email" class={inputStyle} placeholder="Email" type="email" name="email" id="input_email" required />
 			<input
+				name="subject"
 				class={inputStyle}
 				placeholder="Asunto"
 				type="text"
 				name="subject"
 				id="input_subject"
 				required
-				autocomplete
+				
 			/>
 			<textarea required
 				class:list={[inputStyle, 'resize-none	']}
