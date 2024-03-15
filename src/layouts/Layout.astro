@@ -7,22 +7,30 @@ const { title } = Astro.props
 
 import Header from '../components/Header.astro'
 import Navbar from '../components/Navbar.astro'
-import '@fontsource-variable/playpen-sans'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Footer from '../sections/Footer.astro'
 import Copyright from '../sections/Copyright.astro'
+import '@fontsource-variable/playpen-sans'
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<link
+			rel="preload"
+			href="https://cdn.jsdelivr.net/fontsource/fonts/playpen-sans:vf@latest/latin-wght-normal.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 		<link rel="icon" type="image/svg+xml" href="/logo-white.png" />
-		<link fetchpriority="high" rel="preload" as="image" href="../../public/background-1.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="../../public/logo.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="../../public/logo-white.webp" />
+		<link fetchpriority="high" rel="preload" as="image" href="/background-1.webp" />
+		<link fetchpriority="high" rel="preload" as="image" href="/logo.webp" />
+		<link fetchpriority="high" rel="preload" as="image" href="/logo-white.webp" />
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
@@ -34,12 +42,6 @@ import Copyright from '../sections/Copyright.astro'
 		<!-- <Footer /> -->
 		<Copyright />
 		<style is:global>
-			html {
-				scroll-behavior: smooth;
-			}
-			body {
-				font-family: 'Playpen Sans Variable', cursive;
-			}
 			body::-webkit-scrollbar {
 				display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 			}
