@@ -1,9 +1,9 @@
 <nav
 	transition:persist
-	class="relative z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 md:sticky md:top-0 md:justify-center"
+	class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 ease-in-out md:justify-center"
 >
 	<a href="/#header">
-		<img class="size-28" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
+		<img class="size-16" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
 	</a>
 	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
 		<svg
@@ -73,10 +73,38 @@
 <style>
 	nav {
 		box-shadow: 0px 6px 15px -6px rgba(0, 0, 0, 1);
+		transition: all 400ms ease-in-out;
+	}
+
+	.scroll-down {
+		transform: translate(0, -100%);
+	}
+
+	.scroll-up {
 	}
 </style>
 
 <script>
+	const body = document.querySelector('nav')
+	let lastScroll = 1
+
+	window.addEventListener('scroll', () => {
+		const currentScroll = window.scrollY
+		if (currentScroll <= 0) {
+			body.classList.remove('scroll-up')
+		}
+		if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+			body.classList.remove('scroll-up')
+			body.classList.add('scroll-down')
+		}
+		if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
+			body.classList.remove('scroll-down')
+			body.classList.add('scroll-up')
+		}
+
+		lastScroll = currentScroll
+	})
+
 	const opener = document.querySelector('.opener')
 	const closer = document.querySelector('.closer')
 	const navLink = document.querySelectorAll('.nav-link')

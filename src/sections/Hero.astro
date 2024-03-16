@@ -1,4 +1,16 @@
-<section id="hero" class="hero-background flex h-[700px] w-full items-center">
+---
+import { Image } from 'astro:assets'
+import heroBackground from '../../public/background-1.webp'
+---
+
+<section id="hero" class="flex h-[1000px] w-full items-center">
+	<Image
+		class="absolute -z-50 h-[1000px] object-cover"
+		src={heroBackground}
+		alt="Panoramica de Italia"
+		width={1920}
+		height={750}
+	/>
 	<div
 		class="glass m-auto flex w-[70%] max-w-2xl flex-col justify-center gap-6 p-6 text-white md:p-10"
 	>
@@ -16,12 +28,6 @@
 </section>
 
 <style>
-	.hero-background {
-		background-image: url('/background-1.webp');
-		background-size: cover;
-		background-attachment: fixed;
-	}
-
 	.glass {
 		background: rgba(58, 58, 58, 0.3);
 		border-radius: 16px;

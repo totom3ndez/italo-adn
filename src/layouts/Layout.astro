@@ -5,10 +5,8 @@ interface Props {
 
 const { title } = Astro.props
 
-import Header from '../components/Header.astro'
 import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
-import Footer from '../sections/Footer.astro'
 import Copyright from '../sections/Copyright.astro'
 import '@fontsource-variable/playpen-sans'
 ---
@@ -32,9 +30,6 @@ import '@fontsource-variable/playpen-sans'
 			crossorigin
 		/>
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="/background-1.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="/logo.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="/logo-white.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/pattern.svg" />
 
 		<meta name="generator" content={Astro.generator} />
@@ -42,10 +37,8 @@ import '@fontsource-variable/playpen-sans'
 		<ViewTransitions />
 	</head>
 	<body class="bg-darkGreen">
-		<Header />
 		<Navbar />
 		<slot />
-		<!-- <Footer /> -->
 		<Copyright />
 		<style is:global>
 			body::-webkit-scrollbar {
