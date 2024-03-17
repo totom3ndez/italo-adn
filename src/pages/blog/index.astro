@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Button from '../../components/Button.astro'
+import { Image } from 'astro:assets'
+
+const posts = await Astro.glob('./*.mdx')
+---
+
+<Layout title="Blog - Italo ADN">
+	<section id="blog" class="mx-auto w-full bg-white py-40 shadow-2xl">
+		<div
+			id="blogs_container"
+			class="mx-auto grid w-4/5 grid-cols-1 gap-6 md:max-w-7xl md:grid-cols-4"
+		>
+			{
+				posts.map((post) => (
+					<div class="flex flex-col rounded-lg bg-lightGreen p-6">
+						<h2 class="p-3 text-xl font-semibold">{post.frontmatter.postTitle}</h2>
+						<Image
+							width={300}
+							height={100}
+							src={post.frontmatter.image.url}
+							alt={post.frontmatter.image.alt}
+							class="rounded-md"
+						/>
+						<p class="p-3">{post.frontmatter.description}</p>
+						<div>
+							<Button>
+								<a target="_blank" href={post.frontmatter.postUrl}>
+									Visitar post
+								</a>
+							</Button>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</section>
+</Layout>

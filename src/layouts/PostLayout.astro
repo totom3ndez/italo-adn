@@ -1,0 +1,50 @@
+---
+const { title } = Astro.props
+const { postTitle, image, author, pubDate } = Astro.props.frontmatter || Astro.props
+
+import { Image } from 'astro:assets'
+import Navbar from '../components/Navbar.astro'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
+import Copyright from '../sections/Copyright.astro'
+import '@fontsource-variable/playpen-sans'
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+		<meta name="theme-color" content="#5c6e6c" />
+		<meta name="description" content="Blog de ciudadanía Italiana" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
+		<link fetchpriority="high" rel="preload" as="image" href="/pattern.svg" />
+
+		<meta name="generator" content={Astro.generator} />
+		<title>{postTitle}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-white">
+		<Navbar />
+		<div class="mx-auto mb-10 w-3/4 pt-40 md:max-w-4xl">
+			<div class="flex flex-col gap-3 pb-5">
+				<h1 class="text-center text-2xl font-bold">
+					{postTitle}
+					<span class="text-lg">por {author}</span>
+				</h1>
+			</div>
+			<Image class="mx-auto mb-2" width={500} height={200} src={image.url} alt={image.alt} />
+			<p class="mb-10 w-fit rounded-3xl bg-slate-100 p-2 text-sm md:mx-auto">
+				Escrito el: {pubDate}
+			</p>
+			<slot />
+		</div>
+		<Copyright />
+	</body><style>
+		body::-webkit-scrollbar {
+			display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+		}
+	</style>
+</html>
