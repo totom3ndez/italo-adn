@@ -5,10 +5,13 @@ import Coffee from '../components/icons/coffee.astro'
 
 // styles
 
-const header_links = 'flex gap-3 hover:text-darkGreen'
+const header_links = 'flex gap-3 hover:text-lightGreen'
 ---
 
-<header id="header" class="flex grid-cols-3 justify-center gap-6 bg-lightGreen p-3 text-[#fff]">
+<header
+	id="header"
+	class="sticky top-0 z-20 flex grid-cols-3 justify-center gap-6 bg-darkGreen p-3 text-[#fff]"
+>
 	<div class="flex gap-2">
 		<a
 			aria-label="Botón para aportar a nuestra pagina web "
