@@ -10,7 +10,7 @@ const posts = await Astro.glob('./*.mdx')
 	<section id="blog" class="mx-auto w-full bg-white py-40 shadow-2xl">
 		<div
 			id="blogs_container"
-			class="mx-auto grid w-4/5 grid-cols-1 gap-6 md:max-w-7xl md:grid-cols-4"
+			class="mx-auto grid w-4/5 grid-cols-1 gap-6 shadow-2xl md:max-w-7xl md:grid-cols-4"
 		>
 			{
 				posts.map((post) => (
