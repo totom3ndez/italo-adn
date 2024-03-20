@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+---
+
+<Layout title="Nosotros - Italo ADN">
+	<div class="container flex flex-col md:flex-row">
+		<div class="text-container md:max-w-[20rem]">
+			<h2 class="text-xl font-bold">Quienes somos</h2>
+			<p class="">
+				Somos Toto y Loli. Nos conocimos en 2014 y desde ese día no nos separamos más. Con el tiempo
+				nos dimos cuenta de que compartíamos el mismo sueño de viajar por el mundo, pero que, por
+				alguna razón, ninguno de los dos aún había hecho. El universo cruzó nuestros caminos porque
+				sin duda había una gran historia por escribir. Y así fue y lo sigue siendo. En 2016 hicimos
+				nuestro primer viaje al norte argentino que nos dejó fascinados. En 2017 seguimos camino por
+				Bolivia y Perú. Y ahí, en lo más alto del Machu Picchu nos dimos cuenta de que volver
+				después de 15 días de vacaciones y esperar un año más para volver a planear otro viaje no
+				era más una opción. Estando ahí se encendió un fueguito que existía en nosotros, pero que
+				necesitaba de esa chispa para prenderse. Perú fue esa chispa que lo encendió, y que cada vez
+				se hizo más grande. A partir de ese momento nos dedicamos tiempo completo a concretar esta
+				aventura.
+			</p>
+			<p>
+				Fueron 2 años de mucho trabajo y sacrificio los que hicieron que en abril del 2019 nos
+				subamos al avión que nos iba a llevar, sin saber, a un mundo que nos estaba esperando hace
+				mucho. Italia fue la mejor experiencia vivida en nuestras vidas. Podríamos estar horas
+				escribiendo sobre eso y nunca terminaríamos. Hicimos la ciudadanía Italiana en una ciudad al
+				sur de Italia, en Sicilia. Conocimos personas increíbles que hoy siguen siendo nuestra
+				familia y NOS CASAMOS en la playa. Luna llena, pies descalzos, arena y se respiraba más
+				magia que aire en el lugar.
+			</p>
+			<p>
+				En 2020, decidimos lanzarnos a la aventura de dejar el viejo continente. En febrero de ese
+				año llegamos a Australia. 20 días después, el mundo, en plena revolución, cierra sus
+				fronteras. Lo que pensábamos que duraría solos unas semanas, se convirtió en más de dos
+				años. Australia nos dejó cumplir cuanto sueño teníamos en realidad. Vivir, viajando y
+				trabajando. Vivir en nuestra propia casa sobre ruedas. Conocer de punta a punta todos los
+				partes que queríamos. Sin duda fue de las experiencias más increíbles que pudimos tener.
+				¡Después de más 3 de años de dejar suelo argentino pudimos volver! Volver a las raíces,
+				volver al abrazo de la familia y a sentir el amor de quienes nos esperaban hace tanto.
+			</p>
+			<p>
+				Pero hubo algo en medio desde esos años que no se modificó y fue el estar constantemente
+				ayudando a todos los amigos y conocidos que podíamos acerca de cómo sacar su ciudadanía en
+				Italia. Fueron muchas horas de investigación y lectura previo a nuestro viaje allá por el
+				2019, las que hicieron que podamos ayudar a quienes lo necesitaban.
+			</p>
+			<p>
+				¿Se acuerdan del fueguito del que les hablamos al principio? Estando en nuestra aventura
+				Australiana, e incluso antes de haberla comenzado, sabíamos bien que nuestro anhelo era
+				volver a Italia y dedicarnos a tiempo completo a hacer algo que realmente nos guste. Que
+				encienda ese fueguito que tenemos dentro. Bueno, finalmente volvimos al viejo continente,
+				volvimos a suelo Italiano, volvimos a nuestra segunda casa.
+			</p>
+			<p>
+				Sabemos lo difícil que puede ser hacer la ciudadanía, pero sin dudas estuvimos de ese lado y
+				sabemos lo que se siente. ¡Pero si hay algo que podemos decirte es que vos podés hacerlo!!!
+				Fueron y son muchas las horas y dedicación que se invirtieron para este proyecto. En nuestra
+				página vas a encontrar todas las guías completas gratuitas de cómo hacer paso a paso tu
+				ciudadanía Italiana en Italia.
+			</p>
+		</div>
+		<div class="img-container">
+			<Image
+				class="max-w-lg rounded-lg"
+				width={850}
+				height={1000}
+				src="/casamiento-scaled.webp"
+				alt="Foto de nuestro casamiento"
+			/>
+			<Image
+				class="max-w-lg rounded-lg"
+				width={850}
+				height={1000}
+				src="/casamiento1-scaled.webp"
+				alt="Foto de nuestro casamiento"
+			/>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		background-color: white;
+		justify-content: center;
+		padding: 10rem 10%;
+		margin: 0 auto;
+		gap: 3rem;
+	}
+
+	.text-container,
+	.img-container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+</style>
