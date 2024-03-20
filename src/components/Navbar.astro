@@ -1,3 +1,10 @@
+---
+import Opener from './icons/opener.astro'
+import Closer from './icons/closer.astro'
+
+import { navLinks } from '../data/data.js'
+---
+
 <nav
 	transition:persist
 	class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 ease-in-out md:justify-center"
@@ -6,19 +13,7 @@
 		<img class="size-16" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
 	</a>
 	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
-		<svg
-			class="text-[#fff] md:hidden"
-			width="30"
-			height="30"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-			fill="none"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 6l16 0"></path><path
-				d="M4 12l16 0"></path><path d="M4 18l16 0"></path></svg
-		>
+		<Opener />
 	</button>
 	<ul
 		aria-label="Menu navegador"
@@ -28,46 +23,19 @@
 		]}
 	>
 		<button class="grid place-content-end hover:cursor-default" aria-label="Menu closer">
-			<svg
-				class="closer h-auto w-[50px] rounded-lg p-2 hover:cursor-pointer hover:bg-lightGreen md:hidden"
-				xmlns="http://www.w3.org/2000/svg"
-				width="30"
-				height="30"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"
-				></path><path d="M6 6l12 12"></path></svg
-			>
+			<Closer />
 		</button>
-		<a
-			aria-label="Inicio"
-			class="nav-link w-full rounded-t-2xl border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-			href="/#hero">Inicio</a
-		>
-		<a
-			aria-label="Blog"
-			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-			href="/blog">Blog</a
-		>
-		<a
-			aria-label="Servicios"
-			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-			href="/#services">Servicios</a
-		>
-		<a
-			aria-label="Nosotros"
-			class="nav-link w-full border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-			href="/about">Nosotros</a
-		>
-		<a
-			aria-label="Contacto"
-			class="nav-link w-full rounded-b-2xl border border-t-0 py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-			href="/#contact">Contacto</a
-		>
+		{
+			navLinks.map((link) => (
+				<a
+					aria-label={link.name}
+					href={link.href}
+					class="nav-link w-full rounded-t-2xl border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
+				>
+					{link.name}
+				</a>
+			))
+		}
 	</ul>
 </nav>
 <style>

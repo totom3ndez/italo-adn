@@ -1,24 +1,19 @@
 ---
 import ServiceCard from '../components/ServiceCard.astro'
+import { services } from '../data/data'
 ---
 
 <section id="services" class="h-auto w-full py-40">
 	<div class="mx-auto flex w-fit flex-col justify-center gap-4 md:flex-row">
-		<ServiceCard
-			service="Asesoría"
-			details="Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"
-			button="Consultar precio"
-		/>
-		<ServiceCard
-			service="Traducciones"
-			details="Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía"
-			button="Consultar precio"
-		/>
-		<ServiceCard
-			service="Arbologico"
-			details="Esta herramienta creada 100% por nosotros te ayuda a crear tu árbol genealogico y asi tener en claro tus antepasados."
-			button="Ingresar a la APP"
-			hrefButton="https://totom3ndez.github.io/Arbologico/"
-		/>
+		{
+			services.map((service) => (
+				<ServiceCard
+					service={service.name}
+					details={service.description}
+					button={service.price}
+					hrefButton={service.hrefButton}
+				/>
+			))
+		}
 	</div>
 </section>

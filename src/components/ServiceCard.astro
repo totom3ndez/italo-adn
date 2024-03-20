@@ -1,13 +1,45 @@
 ---
-const { hrefButton = '#', service, details, price = '', button } = Astro.props
+const { hrefButton, service, details, price = '', button } = Astro.props
 import Button from './Button.astro'
 ---
 
-<div class="m-auto flex max-w-72 flex-col gap-3 rounded-lg bg-lightGreen p-12 shadow-lg">
+<div
+	class="effect m-auto flex max-w-72 flex-col gap-3 rounded-lg bg-lightGreen p-12 shadow-lg md:bg-transparent"
+>
 	<p class="text-xl font-bold text-black">{service}</p>
 	<p class="text-sm">{details}</p>
 	<span>{price}</span>
-	<a target="_blank" no-referrer href={hrefButton}>
+	<a target="_blank" class="mx-auto w-fit" no-referrer href={hrefButton}>
 		<Button>{button}</Button>
 	</a>
 </div>
+
+<style>
+	.effect {
+		position: relative;
+		overflow: hidden;
+	}
+	.effect::after {
+		background-image: linear-gradient(#a6b7aa 60%, #5c6e6c);
+		content: ' ';
+		width: 100%;
+		height: auto;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		position: absolute;
+		transform: translateY(-10%);
+	}
+
+	.effect:hover:after {
+		animation: hover 0.3s forwards;
+	}
+
+	@keyframes hover {
+		to {
+			transform: translateY(0%);
+		}
+	}
+</style>
