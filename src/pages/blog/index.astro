@@ -7,29 +7,27 @@ const posts = await Astro.glob('./*.mdx')
 ---
 
 <Layout title="Blog - Italo ADN">
-	<section id="blog" class="mx-auto w-full bg-white py-40 shadow-2xl">
+	<section id="blog" class="flex min-h-screen w-screen items-center justify-center bg-white p-10">
 		<div
 			id="blogs_container"
-			class="mx-auto grid w-4/5 grid-cols-1 gap-6 md:max-w-7xl md:grid-cols-4"
+			class="grid max-w-6xl grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-4"
 		>
 			{
 				posts.map((post) => (
-					<div class="flex flex-col rounded-lg bg-lightGreen p-6 shadow-2xl">
-						<h2 class="p-3 text-xl font-semibold">{post.frontmatter.postTitle}</h2>
+					<div class="relative mt-4 flex flex-col items-start gap-4  rounded-lg bg-lightGreen object-cover p-4">
 						<Image
-							width={300}
-							height={100}
+							width={1}
+							height={1}
 							src={post.frontmatter.image.url}
 							alt={post.frontmatter.image.alt}
-							class="rounded-md"
+							class="h-[150px] w-[400px]"
 						/>
-						<p class="p-3">{post.frontmatter.description}</p>
-						<div>
-							<Button>
-								<a target="_blank" href={post.frontmatter.postUrl}>
-									Visitar post
-								</a>
-							</Button>
+						<h4 class="text-xl font-semibold">{post.frontmatter.postTitle}</h4>
+						<p class="text-sm">{post.frontmatter.description}</p>
+						<div class="text-center">
+							<a class="text-md absolute -bottom-7 left-5 w-fit" href={post.frontmatter.postUrl}>
+								<Button>Visitar post</Button>
+							</a>
 						</div>
 					</div>
 				))
