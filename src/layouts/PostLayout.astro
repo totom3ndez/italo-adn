@@ -21,7 +21,6 @@ import '@fontsource-variable/playpen-sans'
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/pattern.svg" />
-
 		<meta name="generator" content={Astro.generator} />
 		<title>{postTitle}</title>
 		<ViewTransitions />
@@ -29,8 +28,8 @@ import '@fontsource-variable/playpen-sans'
 	<body class="bg-white">
 		<Navbar />
 		<div class="mx-auto mb-10 w-3/4 pt-40 md:max-w-4xl">
-			<div class="flex flex-col gap-3 pb-5">
-				<h1 class="text-center text-2xl font-bold">
+			<div class="mx-auto mb-5 flex w-fit flex-col items-center gap-3">
+				<h1 class="text-center text-4xl font-bold">
 					{postTitle}
 					<span class="text-lg">por {author}</span>
 				</h1>

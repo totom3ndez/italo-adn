@@ -22,9 +22,9 @@ const posts = await Astro.glob('./*.mdx')
 							height={1}
 							src={post.frontmatter.image.url}
 							alt={post.frontmatter.image.alt}
-							class="h-[150px] w-[400px]"
+							class="h-[150px] w-[305px]"
 						/>
-						<h4 class="text-xl font-semibold">{post.frontmatter.postTitle}</h4>
+						<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
 						<p class="text-sm">{post.frontmatter.description}</p>
 						<div class="text-center">
 							<a class="text-md absolute -bottom-7 left-5 w-fit" href={post.frontmatter.postUrl}>
