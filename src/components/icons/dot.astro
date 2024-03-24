@@ -1,13 +1,13 @@
 ---
-const { text } = Astro.props
+const { text, textStyle = '' } = Astro.props
 ---
 
 <div class="flex items-center">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		class="icon icon-tabler icon-tabler-point-filled ml-5 pr-3"
-		width="44"
-		height="44"
+		class="icon icon-tabler icon-tabler-point-filled pr-3"
+		width="30"
+		height="30"
 		viewBox="0 0 24 24"
 		stroke-width="1.5"
 		stroke="#2c3e50"
@@ -21,5 +21,5 @@ const { text } = Astro.props
 			stroke-width="0"
 			fill="currentColor"></path>
 	</svg>
-	<p class="font-bold underline">{text}</p>
+	<p class={textStyle}>{text}</p>
 </div>

@@ -14,6 +14,7 @@ pubDate: 17-05-2022
 import BlogTitle from '../../components/BlogTitle.astro'
 import Important from '../../components/Important.astro'
 import LinkBlog from '../../components/LinkBlog.astro'
+import Dot from '../../components/icons/dot.astro'
 
 <BlogTitle text="¿Qué es la carta de identidad (Carta di Identità)?" />
 
@@ -25,15 +26,24 @@ Luego de que seamos reconocidos como ciudadanos italianos y hayan transcripto nu
 
 <BlogTitle text="¿Dónde se gestiona la carta de identidad?" />
 
-~ La misma se realiza en el Ufficio Anagrafe del comune en italiano
-
-~ Si no estamos en Italia, se puede realizar en algunos consulados de Europa. Para poder hacerlo debemos estar inscriptos en el AIRE de ese consulado.
-
+<div class="my-2 flex items-center">
+	<Dot /> La misma se realiza en el Ufficio Anagrafe del comune en italiano
+</div>
+<div class="my-2 flex items-center">
+	<Dot />
+	Si no estamos en Italia, se puede realizar en algunos consulados de Europa. Para poder hacerlo debemos
+	estar inscriptos en el AIRE de ese consulado.
+</div>
 <BlogTitle text="REQUISITOS:" />
 
-~ 2 fotos carnet actuales
+<div class="my-2 flex items-center">
+	<Dot />2 fotos carnet actuales
+</div>
 
-~ Abonar la tasa de 25 euros aproximadamente
+<div class="my-2 flex items-center">
+	<Dot />
+	Abonar la tasa de 25 euros aproximadamente
+</div>
 
 <Important
 	bg="bg-green-100"
@@ -44,4 +54,4 @@ Luego de que seamos reconocidos como ciudadanos italianos y hayan transcripto nu
 
 No suele tardar mas de 15 días. Va a depender siempre de cada comuna, pero el trámite para realizarla es sencillo.
 
-Una vez que no otorguen el comprobante de la gestión podemos gestionar la <LinkBlog href='#' text='Tessera Sanitaria' /> y en algunos casos (no todos) el pasaporte.
+Una vez que no otorguen el comprobante de la gestión podemos gestionar la <LinkBlog href='/blog/tessera-sanitaria' text='Tessera Sanitaria' /> y en algunos casos (no todos) el pasaporte.
