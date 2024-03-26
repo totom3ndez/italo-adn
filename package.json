@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^2.2.1",
+		"@astrojs/netlify": "^5.2.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"@fontsource-variable/playpen-sans": "^5.0.3",
 		"@fontsource/berkshire-swash": "^5.0.19",
