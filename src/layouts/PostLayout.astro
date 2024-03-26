@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '../sections/Copyright.astro'
 import '@fontsource-variable/playpen-sans'
+import Cafecito from '../components/Cafecito.astro'
 ---
 
 <!doctype html>
@@ -39,6 +40,7 @@ import '@fontsource-variable/playpen-sans'
 				Escrito el: {pubDate}
 			</p>
 			<slot />
+			<Cafecito />
 		</div>
 		<Copyright />
 		<style>
