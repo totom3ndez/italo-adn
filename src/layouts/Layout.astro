@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string
+	action?: string
 }
 
-const { title } = Astro.props
+const { title, action} = Astro.props
 
 import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
@@ -14,11 +15,13 @@ import '@fontsource-variable/playpen-sans'
 <!doctype html>
 <html lang="es" class="scroll-smooth" data-rh="true">
 	<head>
+		<meta name="robots" content={action}/>
 		<meta charset="UTF-8" />
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 		<meta name="theme-color" content="#5c6e6c" />
 		<meta name="creator" content="Tomas Mendez" />
+		<meta name="copyright" content="Tomas Mendez" />
 		<meta
 			name="keywords"
 			content="ciudadanía,ciudadania,italiana,Italiana,ciudadania en italia,ciudadania italiana,tramite,residencia legal,espacio schenguen, ciudadania italiana en italia, paso a paso ciudadania italiana"

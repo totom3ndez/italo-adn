@@ -3,7 +3,7 @@
 export const navLinks = [
 	{
 		name: 'Inicio',
-		href: '/#hero'
+		href: '/'
 	},
 	{
 		name: 'Blog',

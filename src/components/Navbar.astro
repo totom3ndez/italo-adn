@@ -27,13 +27,14 @@ import { navLinks } from '../data/data.js'
 		</button>
 		{
 			navLinks.map((link) => (
-				<a
+				<li><a
 					aria-label={link.name}
 					href={link.href}
 					class="nav-link w-full border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
 				>
 					{link.name}
 				</a>
+			</li>
 			))
 		}
 	</ul>
