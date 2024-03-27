@@ -27,16 +27,16 @@ export const navLinks = [
 
 export const services = [
 	{
-		name: 'Asesoría',
+		name: 'Asesorías',
 		description:
-			'Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía.',
-		price: 'Consultar precio'
+			'Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del trámite de la ciudadanía.',
+		price: 'Consultar'
 	},
 	{
 		name: 'Traducciones',
 		description:
 			'Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía.',
-		price: 'Consultar precio'
+		price: 'Consultar'
 	},
 	{
 		name: 'Arbologico',

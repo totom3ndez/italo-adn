@@ -4,7 +4,7 @@ interface Props {
 	action?: string
 }
 
-const { title, action} = Astro.props
+const { title, action } = Astro.props
 
 import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
@@ -15,7 +15,7 @@ import '@fontsource-variable/playpen-sans'
 <!doctype html>
 <html lang="es" class="scroll-smooth" data-rh="true">
 	<head>
-		<meta name="robots" content={action}/>
+		<meta name="robots" content={action} />
 		<meta charset="UTF-8" />
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
@@ -44,7 +44,6 @@ import '@fontsource-variable/playpen-sans'
 			crossorigin
 		/>
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
-		<link fetchpriority="high" rel="preload" as="image" href="/pattern.svg" />
 		<link fetchpriority="high" rel="preload" as="image" href="/beneficios-ciudadania.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/background-1.webp" />
 		<meta name="generator" content={Astro.generator} />

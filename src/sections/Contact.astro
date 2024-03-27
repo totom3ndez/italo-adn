@@ -3,7 +3,7 @@ const inputStyle =
 	'rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
 ---
 
-<section id="contact">
+<section id="contact" class="py-10">
 	<div
 		class="mx-auto flex w-full max-w-lg flex-col gap-3 rounded-lg border-none bg-lightGreen p-10 text-white shadow-2xl"
 	>
@@ -12,7 +12,7 @@ const inputStyle =
 				Contacto
 			</p>
 			<p class="text-md text-center md:text-lg">
-				Utiliza este formulario para despejar cualquier duda que tengas. Nos pondremos en contacto a
+				Utilizá este formulario para despejar cualquier duda que tengas. Nos pondremos en contacto a
 				la brevedad.
 			</p>
 		</div>
@@ -20,7 +20,7 @@ const inputStyle =
 			action="https://api.web3forms.com/submit"
 			method="POST"
 			id="form"
-			class="needs-validation mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg"
+			class="needs-validation z-10 mx-auto flex w-3/4 flex-col gap-4 md:max-w-lg"
 			data-astro-reload
 			novalidate
 		>
@@ -28,7 +28,7 @@ const inputStyle =
 			<input type="hidden" name="access_key" value="639c7b82-a400-4237-8ff4-9ebdc4d2cc05" />
 
 			<input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-			<div class="flex place-content-center">
+			<div class="flex flex-col place-content-center">
 				<input
 					autocomplete="given-name"
 					type="text"
@@ -41,7 +41,7 @@ const inputStyle =
 					Por favor escribe tu nombre completo.
 				</div>
 			</div>
-			<div class="flex place-content-center">
+			<div class="flex flex-col place-content-center">
 				<label for="email_address" class="sr-only">Email</label><input
 					id="email_address"
 					type="email"
@@ -55,7 +55,7 @@ const inputStyle =
 					Por favor escribe un email correcto.
 				</div>
 			</div>
-			<div class="flex place-content-center">
+			<div class="flex flex-col place-content-center">
 				<textarea
 					name="message"
 					required
@@ -157,7 +157,21 @@ const inputStyle =
 
 <style>
 	section {
-		background-image: url('../assets/pattern.svg');
+		position: relative;
+		background-image: url('/pattern.svg');
 		background-size: 200px;
+	}
+	section::after {
+		content: ' ';
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		background-image: linear-gradient(
+			180deg,
+			rgba(92, 110, 108, 0.5) 100%,
+			rgba(92, 110, 108, 1) 50%
+		);
+		top: 0;
+		z-index: 5;
 	}
 </style>
