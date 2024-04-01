@@ -3,16 +3,30 @@ import ServiceCard from '../components/ServiceCard.astro'
 import { services } from '../data/data'
 ---
 
-<section id="services" class="h-auto w-full py-40">
+<section id="services" class="flex h-auto w-full flex-col gap-20 py-40">
+	<div
+		class="mx-10 flex flex-col justify-between gap-10 text-white md:mx-auto md:max-w-4xl md:flex-row"
+	>
+		<h2 class="animate-slide-in-left text-center text-2xl md:text-start md:text-4xl">Servicios</h2>
+		<p class="text-md md:text-lg">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ratione dolorem quisquam eos
+			maiores aspernatur esse omnis veniam perspiciatis obcaecati quaerat saepe voluptas voluptatem
+			cum veritatis possimus dicta sit, assumenda repellendus! Maxime, nesciunt consectetur est
+			soluta deserunt dolore iste odio facere tenetur ab fuga eos suscipit excepturi laborum,
+			voluptatibus cupiditate!
+		</p>
+	</div>
 	<div class="mx-auto flex w-fit flex-col justify-center gap-4 md:flex-row">
 		{
 			services.map((service) => (
-				<ServiceCard
-					service={service.name}
-					details={service.description}
-					button={service.price}
-					hrefButton={service.hrefButton}
-				/>
+				<>
+					<ServiceCard
+						service={service.name}
+						details={service.description}
+						button={service.price}
+						hrefButton={service.hrefButton}
+					/>
+				</>
 			))
 		}
 	</div>

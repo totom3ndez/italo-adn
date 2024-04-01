@@ -1,3 +1,5 @@
+import Tree from '../components/icons/tree.astro'
+
 // MENU LINKS
 
 export const navLinks = [
@@ -41,7 +43,7 @@ export const services = [
 	{
 		name: 'Arbologico',
 		description:
-			'Esta herramienta creada 100% por nosotros te ayuda a crear tu árbol genealogico y asi tener en claro tus antepasados.',
+			'Esta herramienta creada 100% por nosotros te dara la posibilidad de armar tu árbol genealogico y asi tener en claro tus antepasados.',
 		price: 'Ingresar a la APP',
 		hrefButton: 'https://totom3ndez.github.io/Arbologico/'
 	}

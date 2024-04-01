@@ -9,7 +9,7 @@ import { navLinks } from '../data/data.js'
 	transition:persist
 	class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 ease-in-out md:justify-center"
 >
-	<a href="/#header">
+	<a href="/">
 		<img class="size-16" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
 	</a>
 	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
@@ -27,14 +27,15 @@ import { navLinks } from '../data/data.js'
 		</button>
 		{
 			navLinks.map((link) => (
-				<li><a
-					aria-label={link.name}
-					href={link.href}
-					class="nav-link w-full border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-				>
-					{link.name}
-				</a>
-			</li>
+				<li>
+					<a
+						aria-label={link.name}
+						href={link.href}
+						class="nav-link w-full border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
+					>
+						{link.name}
+					</a>
+				</li>
 			))
 		}
 	</ul>
