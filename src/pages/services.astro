@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Servicios - Italo ADN">
+    <section class="pt-40 bg-white max-w-[1200px] min-h-screen">
+        <div class="flex justify-center items-center gap-4">
+            <h2 class="md:text-2xl text-lg text-center">Servicios</h2>
+            <select class="px-4 border border-lightRed rounded-lg" id="mySelect" name="servicesSelect" id="servicesSelect">
+                <option value="partidas" selected>Pedido de partidas</option>
+                <option value="asesoria" selected>Asesorias</option>
+                <option value="españolas" selected>Pedido de actas españolas</option>
+                <option value="investigacion" selected>Investigación genealogica</option>
+                <option value="control" selected>Control de carpeta</option>
+            </select>
+        </div>
+        <div id="service-container">
+
+        </div>
+    </section>
+</Layout>
+
+<script>
+    const selectElement = document.getElementById('mySelect');
+  
+    selectElement.addEventListener('change', (event) => {
+      const selectedValue = event.target.value;
+      console.log(selectedValue);
+    });
+</script>
