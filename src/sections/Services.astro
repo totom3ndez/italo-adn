@@ -4,18 +4,27 @@ import { services } from '../data/data'
 ---
 
 <section id="services" class="flex h-auto w-full flex-col gap-20 py-40">
-	<div
-		class="mx-10 flex flex-col justify-between gap-10 text-white md:mx-auto md:max-w-4xl md:flex-row"
-	>
-		<h2 class="animate-slide-in-left text-center text-2xl md:text-start md:text-4xl">Servicios</h2>
-		<p class="text-md md:text-lg">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ratione dolorem quisquam eos
-			maiores aspernatur esse omnis veniam perspiciatis obcaecati quaerat saepe voluptas voluptatem
-			cum veritatis possimus dicta sit, assumenda repellendus! Maxime, nesciunt consectetur est
-			soluta deserunt dolore iste odio facere tenetur ab fuga eos suscipit excepturi laborum,
-			voluptatibus cupiditate!
-		</p>
-	</div>
+	<a href="/services" class="mx-auto flex w-fit gap-4 font-bold text-white md:text-4xl">
+		Conocé nuestros servicios aquí
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="icon icon-tabler icon-tabler-arrow-big-left-line animate-horizontal-bounce animate-iteration-count-infinite"
+			width="44"
+			height="44"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="white"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<path
+				d="M12 15v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h6v6h-6z"
+			></path>
+			<path d="M21 15v-6"></path>
+		</svg>
+	</a>
 	<div class="mx-auto flex w-fit flex-col justify-center gap-4 md:flex-row">
 		{
 			services.map((service) => (

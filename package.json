@@ -10,24 +10,23 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^2.2.1",
+		"@astrojs/mdx": "^2.2.2",
 		"@astrojs/netlify": "^5.2.0",
 		"@astrojs/react": "^3.1.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"@fontsource-variable/playpen-sans": "^5.0.3",
 		"@fontsource/berkshire-swash": "^5.0.19",
-<<<<<<< HEAD
 		"@midudev/tailwind-animations": "^0.0.7",
-=======
+		"@nanostores/react": "^0.7.2",
 		"@types/react": "^18.2.73",
 		"@types/react-dom": "^18.2.23",
->>>>>>> 131d2a3d93b785d2422795e9d1a282ae84dfe6cc
-		"astro": "^4.4.15",
+		"astro": "^4.5.12",
+		"nanostores": "^0.10.2",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0",
-		"prettier-plugin-tailwindcss": "^0.5.12",
+		"prettier-plugin-tailwindcss": "^0.5.13",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"tailwindcss": "^3.4.1"
+		"tailwindcss": "^3.4.3"
 	}
 }
