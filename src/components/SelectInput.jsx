@@ -1,18 +1,21 @@
 import { useState } from 'react'
 import { useStore } from '@nanostores/react'
 import { addService, serviceStore } from '../api/selectStore'
-import ServiceForm from '../components/ServiceForm'
+import PedidoPartidas from './pedidoPartidas'
+import Asesoria from './Asesoria'
 
 export default function SelectInput() {
 	const [service, setService] = useState('')
 	const $selectedService = useStore(serviceStore)
 	return (
 		<>
-			<div className="flex items-center justify-center gap-4">
-				<h2 className="text-center text-lg md:text-2xl">Servicios</h2>
+			<div className="flex flex-col items-center justify-center gap-4">
+				<h2 className="text-center text-2xl md:text-4xl">Servicios</h2>
 				<select
-					onChange={(e) => setService(e.target.value)}
-					className="rounded-lg border border-lightRed px-4"
+					onChange={(e) => {
+						setService(e.target.value)
+					}}
+					className="rounded-lg border border-lightRed p-2 text-center"
 					id="mySelect"
 					name="servicesSelect"
 				>
@@ -22,13 +25,18 @@ export default function SelectInput() {
 					<option value="investigacion">Investigación genealogica</option>
 					<option value="control">Control de carpeta</option>
 				</select>
-				<button onClick={() => addService(service)}>Mostrar servicio</button>
+				<button
+					className="w-fit rounded-lg bg-yellow p-2 hover:bg-darkRed hover:text-white"
+					onClick={() => addService(service)}
+				>
+					Mostrar servicio
+				</button>
 			</div>
-			<div id="service-container">
+			<div id="service-container" className="pt-20">
 				{$selectedService === 'partidas' ? (
-					<ServiceForm />
+					<PedidoPartidas client:load />
 				) : <p>Seleccionar servicio</p> && $selectedService === 'asesoria' ? (
-					<p>Asesoria</p>
+					<Asesoria />
 				) : <p>Seleccionar servicio</p> && $selectedService === 'españolas' ? (
 					<p>españolas</p>
 				) : <p>Seleccionar servicio</p> && $selectedService === 'investigacion' ? (

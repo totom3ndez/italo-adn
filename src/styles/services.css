@@ -1,0 +1,11 @@
+p {
+	margin: 20px 0;
+}
+
+.titulo {
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: x-large;
+	text-transform: uppercase;
+	text-align: center;
+}

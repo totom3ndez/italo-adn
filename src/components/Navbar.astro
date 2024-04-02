@@ -27,12 +27,8 @@ import { navLinks } from '../data/data.js'
 		</button>
 		{
 			navLinks.map((link) => (
-				<li>
-					<a
-						aria-label={link.name}
-						href={link.href}
-						class="nav-link w-full border py-4 text-center hover:bg-lightGreen md:border-none md:text-lg md:hover:bg-darkGreen md:hover:text-lightRed"
-					>
+				<li class="border border-white p-4 text-center md:rounded-lg md:border-none md:p-2 md:hover:bg-yellow md:hover:text-black">
+					<a aria-label={link.name} href={link.href} class="">
 						{link.name}
 					</a>
 				</li>
