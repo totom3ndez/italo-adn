@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import '../styles/services.css'
+
+const API = '/api/sendEmail.json'
 
 export default function ServiceForm() {
 	const handleSubmit = async (e) => {
@@ -20,7 +23,7 @@ export default function ServiceForm() {
 			couple
 		} = Object.fromEntries(formData)
 		try {
-			const res = await fetch('/api/sendEmail.json', {
+			const res = await fetch(API, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -52,8 +55,9 @@ export default function ServiceForm() {
 					`
 				})
 			})
+			formData.values('')
 		} catch (e) {
-			console.error(e)
+			console.log(e)
 		}
 	}
 

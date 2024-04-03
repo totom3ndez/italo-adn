@@ -4,9 +4,9 @@ import { Resend } from 'resend'
 const resend = new Resend(import.meta.env.API_RESEND)
 export const POST: APIRoute = async ({ params, request }) => {
 	const body = await request.json()
-	const { to, from, html, subject, text } = body
+	const { to, from, html, subject } = body
 
-	if (!to || !from || !html || !subject || !text) {
+	if (!to || !from || !html || !subject) {
 		return new Response(null, {
 			status: 404,
 			statusText: 'Did not provided the right data'
@@ -17,8 +17,7 @@ export const POST: APIRoute = async ({ params, request }) => {
 		from,
 		to,
 		subject,
-		html,
-		text
+		html
 	})
 
 	if (send.data) {
