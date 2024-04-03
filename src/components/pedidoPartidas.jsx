@@ -4,8 +4,11 @@ import '../styles/services.css'
 const API = '/api/sendEmail.json'
 
 export default function ServiceForm() {
+	const [sentMessage, setSentMessage] = useState(false)
+
 	const handleSubmit = async (e) => {
 		e.preventDefault()
+		const form = e.target
 		const formData = new FormData(e.currentTarget)
 		const {
 			firstName,
@@ -55,7 +58,16 @@ export default function ServiceForm() {
 					`
 				})
 			})
-			formData.values('')
+
+			// Notify form sent
+
+			setSentMessage(true)
+			setTimeout(() => {
+				setSentMessage(false)
+			}, 7000)
+
+			// Clear form
+			form.reset()
 		} catch (e) {
 			console.log(e)
 		}
@@ -242,12 +254,19 @@ export default function ServiceForm() {
 								placeholder="Maria"
 							/>
 						</fieldset>
-						<button
-							className="mx-auto mt-4  w-fit rounded-lg bg-yellow p-2 hover:bg-darkRed hover:text-white"
-							type="submit"
-						>
-							CONSULTAR
-						</button>
+						<div className="mx-auto flex flex-col">
+							<button
+								className="mx-auto mt-4  w-fit rounded-lg bg-yellow p-2 hover:bg-darkRed hover:text-white"
+								type="submit"
+							>
+								CONSULTAR
+							</button>
+							{sentMessage && (
+								<div className="text-center font-bold text-green-600">
+									¡Formulario enviado! Pronto nos pondremos en contacto.
+								</div>
+							)}
+						</div>
 					</form>
 				</div>
 			</div>
