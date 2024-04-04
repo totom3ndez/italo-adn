@@ -73,6 +73,9 @@ export default function ServiceForm() {
 		}
 	}
 
+	const buttonStyle =
+		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
+
 	const inputStyle =
 		'resize-none rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 my-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
 
@@ -255,10 +258,7 @@ export default function ServiceForm() {
 							/>
 						</fieldset>
 						<div className="mx-auto flex flex-col">
-							<button
-								className="mx-auto mt-4  w-fit rounded-lg bg-yellow p-2 hover:bg-darkRed hover:text-white"
-								type="submit"
-							>
+							<button className={buttonStyle} type="submit">
 								CONSULTAR
 							</button>
 							{sentMessage && (

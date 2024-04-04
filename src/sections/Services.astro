@@ -4,28 +4,13 @@ import { services } from '../data/data'
 ---
 
 <section id="services" class="flex h-auto w-full flex-col gap-20 py-40">
-	<a href="/services" class="mx-auto flex w-fit gap-4 text-2xl font-bold text-white md:text-4xl">
-		Conocé nuestros servicios aquí
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="icon icon-tabler icon-tabler-arrow-big-left-line animate-horizontal-bounce animate-iteration-count-infinite"
-			width="44"
-			height="44"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="white"
-			fill="none"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-		>
-			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-			<path
-				d="M12 15v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h6v6h-6z"
-			></path>
-			<path d="M21 15v-6"></path>
-		</svg>
+	<a
+		href="/services"
+		class="mx-4 flex w-fit gap-4 text-center text-2xl font-bold text-white md:mx-auto md:text-4xl"
+	>
+		Conocé nuestros servicios aquí.
 	</a>
-	<div class="mx-auto flex w-fit flex-col justify-center gap-4 md:flex-row">
+	<div class="mx-auto flex w-fit flex-col justify-center gap-4 px-4 md:flex-row">
 		{
 			services.map((service) => (
 				<>

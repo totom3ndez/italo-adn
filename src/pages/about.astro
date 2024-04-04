@@ -4,8 +4,8 @@ import { Image } from 'astro:assets'
 ---
 
 <Layout title="Nosotros - Italo ADN">
-	<div class="container flex flex-col md:flex-row">
-		<div class="text-container md:max-w-[34rem]">
+	<div class="container grid md:grid-cols-2">
+		<div class="text-container sm:w-lg md:max-w-[40rem]">
 			<h2 class="text-xl font-bold">Quienes somos</h2>
 			<p class="">
 				Somos Toto y Loli. Nos conocimos en 2014 y desde ese día no nos separamos más. Con el tiempo
@@ -67,14 +67,14 @@ import { Image } from 'astro:assets'
 		</div>
 		<div class="img-container">
 			<Image
-				class="max-w-lg rounded-lg"
+				class="rounded-lg"
 				width={850}
 				height={1000}
 				src="/casamiento-scaled.webp"
 				alt="Foto de nuestro casamiento"
 			/>
 			<Image
-				class="max-w-lg rounded-lg"
+				class="rounded-lg"
 				width={850}
 				height={1000}
 				src="/casamiento1-scaled.webp"
@@ -88,7 +88,7 @@ import { Image } from 'astro:assets'
 	.container {
 		background-color: white;
 		justify-content: center;
-		padding: 10rem 10%;
+		padding: 10rem 5%;
 		margin: 0 auto;
 		gap: 3rem;
 	}
