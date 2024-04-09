@@ -31,15 +31,34 @@ export const services = [
 	{
 		name: 'Asesorías',
 		description:
-			'Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del trámite de la ciudadanía.',
-		price: 'Consultar'
+			'Te guío en el proceso, y ayudo a responder tus dudas. Podemos ajustarlo al horario que más te convenga, ya que es Online.',
+		button: 'Ver más',
+		hrefButton: '/services'
 	},
 	{
 		name: 'Traducciones',
 		description:
-			'Te brindamos asesoría en cuanto a armado de carpetas, procedimientos y puntos importantes del tramite de la ciudadanía.',
-		price: 'Consultar'
+			'Para iniciar el proceso de solicitud de Ciudadanía Italiana en Italia, es imprescindible realizar la traducción de los registros que conforman tu carpeta y que no sean de origen italiano.',
+		button: 'Ver más',
+		hrefButton: '/services'
 	},
+	{
+		name: 'Solicitud de actas',
+		description:
+			'El primer paso para obtener tu ciudadanía es ubicar los registros de tu antepasado, ¡y	nosotros nos encargamos de eso por vos!',
+		button: 'Ver más',
+		hrefButton: '/services'
+	},
+	{
+		name: 'Control de carpetas',
+		description:
+			'Nos encargamos del control exhaustivo de las actas para determinar si es necesario realizar rectificaciones, o si ya estás en condiciones de continuar con la siguiente etapa de proceso.',
+		button: 'Ver más',
+		hrefButton: '/services'
+	}
+]
+
+export const tools = [
 	{
 		name: 'Arbologico',
 		description:

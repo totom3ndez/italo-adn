@@ -1,12 +1,13 @@
 ---
-const { hrefButton, service, details, icon, price = '', button } = Astro.props
+const { hrefButton, service, details, price = '', button } = Astro.props
 import Button from './Button.astro'
 ---
 
-<div class="effect m-auto flex max-w-72 flex-col gap-3 rounded-lg bg-lightGreen p-12 shadow-lg">
-	<p class="text-xl font-bold text-black">{service}</p>
-	<span>{icon}</span>
-	<p class="text-sm">{details}</p>
+<div
+	class="animation m-auto grid h-[400px] w-96 grid-cols-1 grid-rows-4 rounded-lg bg-lightGreen p-12 leading-6 shadow-lg transition-all duration-500 hover:bg-darkGreen hover:text-white hover:shadow-xl hover:shadow-slate-950"
+>
+	<h1 class="text-xl font-bold">{service}</h1>
+	<p class="row-span-2">{details}</p>
 	<span>{price}</span>
 	<a target="_blank" class="mx-auto w-fit" no-referrer href={hrefButton}>
 		<Button>{button}</Button>

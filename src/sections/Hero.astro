@@ -2,16 +2,16 @@
 import { Image } from 'astro:assets'
 ---
 
-<section id="hero" class="animate-slide-out-top flex h-[1000px] w-full items-center">
+<section id="hero" class="flex h-[1000px] w-full items-center justify-center">
 	<Image
-		class="absolute -z-50 h-[1000px] object-cover"
+		class="absolute -z-50 mx-auto h-[1000px] object-cover"
 		src="/background-1.webp"
 		alt="Panoramica de Italia"
 		width={1920}
 		height={750}
 	/>
 	<div
-		class="glass m-auto flex w-[70%] max-w-2xl flex-col justify-center gap-6 p-6 text-white md:p-10"
+		class="glass m-auto flex w-[70%] max-w-2xl animate-fade-in-up flex-col justify-center gap-6 p-6 text-white animate-delay-300 md:p-10"
 	>
 		<h1 class="text-center text-2xl md:text-5xl">Obtén tu Ciudadanía Italiana</h1>
 		<p class="text-center text-sm md:text-xl">
@@ -20,7 +20,7 @@ import { Image } from 'astro:assets'
 			como en Italia, tutoriales, artículos y mucho más.
 		</p>
 		<a
-			class="mx-auto w-fit rounded-full bg-yellow px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-gray-700 hover:text-white focus:ring-gray-700"
+			class="mx-auto w-fit animate-blurred-fade-in rounded-full bg-yellow px-5 py-2.5 text-center text-sm font-medium text-black animate-delay-500 hover:bg-gray-700 hover:text-white focus:ring-gray-700"
 			href="/blog">Descubrí nuestro blog</a
 		>
 	</div>

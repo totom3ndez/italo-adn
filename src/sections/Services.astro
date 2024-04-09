@@ -3,21 +3,21 @@ import ServiceCard from '../components/ServiceCard.astro'
 import { services } from '../data/data'
 ---
 
-<section id="services" class="flex h-auto w-full flex-col gap-20 py-40">
+<section id="services" class="flex h-auto w-full flex-col items-center justify-center gap-20 py-40">
 	<a
 		href="/services"
-		class="mx-4 flex w-fit gap-4 text-center text-2xl font-bold text-white md:mx-auto md:text-4xl"
+		class="md:text-4x mx-4 flex w-fit gap-4 text-center text-4xl font-bold text-white transition-all hover:text-yellow md:mx-auto"
 	>
 		Conocé nuestros servicios aquí.
 	</a>
-	<div class="mx-auto flex w-fit flex-col justify-center gap-4 px-4 md:flex-row">
+	<div class="max-w-42 mx-auto flex flex-col flex-wrap justify-center gap-4 px-4 md:flex-row">
 		{
 			services.map((service) => (
 				<>
 					<ServiceCard
 						service={service.name}
 						details={service.description}
-						button={service.price}
+						button={service.button}
 						hrefButton={service.hrefButton}
 					/>
 				</>
