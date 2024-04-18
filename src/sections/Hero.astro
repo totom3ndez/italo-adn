@@ -2,14 +2,7 @@
 import { Image } from 'astro:assets'
 ---
 
-<section id="hero" class="flex h-[1000px] w-full items-center justify-center">
-	<Image
-		class="absolute -z-50 mx-auto h-[1000px] object-cover"
-		src="/background-1.webp"
-		alt="Panoramica de Italia"
-		width={1920}
-		height={750}
-	/>
+<section id="hero" class="mx-auto flex h-[1000px] w-full items-center justify-center">
 	<div
 		class="glass m-auto flex w-[70%] max-w-2xl animate-fade-in-up flex-col justify-center gap-6 p-6 text-white animate-delay-300 md:p-10"
 	>
@@ -27,6 +20,10 @@ import { Image } from 'astro:assets'
 </section>
 
 <style>
+	section {
+		background-image: url('/background-1.webp');
+		background-repeat: no-repeat;
+	}
 	.glass {
 		background: rgba(58, 58, 58, 0.3);
 		border-radius: 16px;

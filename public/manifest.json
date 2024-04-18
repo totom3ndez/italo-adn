@@ -6,6 +6,7 @@
 	"display_override": ["browser", "minimal-ui"],
 	"display": "standalone",
 	"scope": "/",
+	"theme-color": "#5c6e6c",
 	"description": "Pagina oficial de Italo ADN - Encuentra todo lo relacionado a el tramite de la Ciudadanía Italiana en Argentina y en Italia",
 	"icons": [
 		{

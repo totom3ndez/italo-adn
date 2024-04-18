@@ -48,13 +48,6 @@ export const services = [
 			'El primer paso para obtener tu ciudadanía es ubicar los registros de tu antepasado, ¡y	nosotros nos encargamos de eso por vos!',
 		button: 'Ver más',
 		hrefButton: '/services'
-	},
-	{
-		name: 'Control de carpetas',
-		description:
-			'Nos encargamos del control exhaustivo de las actas para determinar si es necesario realizar rectificaciones, o si ya estás en condiciones de continuar con la siguiente etapa de proceso.',
-		button: 'Ver más',
-		hrefButton: '/services'
 	}
 ]
 

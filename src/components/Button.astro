@@ -1,10 +1,13 @@
 ---
-const { type = 'button' } = Astro.props
+const { type = 'button', addClass } = Astro.props
 ---
 
 <button
 	type={type}
-	class="text-md mx-auto w-fit rounded-full bg-yellow px-5 py-2.5 text-center font-medium text-black transition-all hover:bg-gray-700 hover:text-white focus:ring-gray-700"
+	class:list={[
+		'text-md mx-auto w-fit rounded-full bg-yellow px-5 py-2.5 text-center font-medium text-black transition-all hover:bg-gray-700 hover:text-white focus:ring-gray-700',
+		addClass
+	]}
 >
 	<slot />
 </button>
