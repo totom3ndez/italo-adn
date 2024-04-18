@@ -14,15 +14,15 @@ export default function SelectInput() {
 
 	const Servicios = [
 		{
-			name: 'Partidas',
+			name: 'Búsqueda de actas Italianas',
 			value: 'partidas'
 		},
 		{
-			name: 'Asesoría',
+			name: 'Asesoría personalizada',
 			value: 'asesoria'
 		},
 		{
-			name: 'Pedido de actas españolas',
+			name: 'Actas españolas',
 			value: 'españolas'
 		},
 		{
@@ -54,7 +54,11 @@ export default function SelectInput() {
 					name="servicesSelect"
 				>
 					{Servicios.map((service) => {
-						return <option value={service.value}>{service.name}</option>
+						return (
+							<option key={service.name} value={service.value}>
+								{service.name}
+							</option>
+						)
 					})}
 				</select>
 				<button className={buttonStyle} onClick={() => addService(service)}>

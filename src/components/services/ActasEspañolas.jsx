@@ -4,7 +4,7 @@ export default function ActasEspañolas() {
 	return (
 		<>
 			<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
-				<h2 className="titulo">PEDIDO DE ACTAS ESPAÑOLAS</h2>
+				<h2 className="titulo">ACTAS ESPAÑOLAS</h2>
 				<p>
 					Te ofrecemos gestionar una llamada al Registro Civil o al ayuntamiento español para
 					conocer los detalles del procedimiento de solicitud y el método de envío.
