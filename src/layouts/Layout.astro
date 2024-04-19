@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '../sections/Copyright.astro'
 import '@fontsource-variable/playpen-sans'
+import Footer from '../sections/Footer.astro'
 ---
 
 <!doctype html>
@@ -54,6 +55,7 @@ import '@fontsource-variable/playpen-sans'
 	<body class="bg-darkGreen">
 		<Navbar />
 		<slot />
+		<Footer />
 		<Copyright />
 		<style is:global>
 			body::-webkit-scrollbar {
