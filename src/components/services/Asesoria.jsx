@@ -1,7 +1,7 @@
 import '../../styles/services.css'
 import { useState } from 'react'
 
-const API = '../../pages/api/sendEmail.json.ts'
+const API = '/api/sendEmail.json.ts'
 
 export default function Asesoria() {
 	const inputStyle =
