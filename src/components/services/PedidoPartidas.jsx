@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../../styles/services.css'
-const API = '/api/sendEmail.json'
+const API = '../../pages/api/sendEmail.json.ts'
 
 export default function ServiceForm() {
 	const [sentMessage, setSentMessage] = useState(false)
