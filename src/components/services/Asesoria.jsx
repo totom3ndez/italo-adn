@@ -1,7 +1,7 @@
 import '../../styles/services.css'
 import { useState } from 'react'
 
-const API = '/api/sendEmail.json.ts'
+const API = '/api/sendEmail.json'
 
 export default function Asesoria() {
 	const inputStyle =
@@ -26,8 +26,8 @@ export default function Asesoria() {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					from: 'info@italoadn.com',
 					to: 'info@italoadn.com',
+					from: 'info@italoadn.com',
 					subject: `Nueva asesoría para ${name}`,
 					html: `
 						<h1>Formulario de Asesoría</h1>

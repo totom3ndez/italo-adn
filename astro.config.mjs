@@ -9,5 +9,7 @@ import netlify from '@astrojs/netlify'
 export default defineConfig({
 	integrations: [tailwind(), mdx(), react()],
 	output: 'server',
-	adapter: netlify()
+	adapter: netlify(),
+	site: 'https://totom3ndez.github.io',
+	base: '/italo-adn'
 })
