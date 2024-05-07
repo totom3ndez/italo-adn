@@ -10,6 +10,5 @@ export default defineConfig({
 	integrations: [tailwind(), mdx(), react()],
 	output: 'server',
 	adapter: netlify(),
-	site: 'https://totom3ndez.github.io',
-	base: '/italo-adn'
+	site: 'https://italoadn.com'
 })
