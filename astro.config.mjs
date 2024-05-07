@@ -9,6 +9,5 @@ import netlify from '@astrojs/netlify'
 export default defineConfig({
 	integrations: [tailwind(), mdx(), react()],
 	output: 'server',
-	adapter: netlify(),
-	site: 'https://italoadn.com'
+	adapter: netlify()
 })
