@@ -1,7 +1,7 @@
 import '../../styles/services.css'
 import { useState } from 'react'
 
-const { API_RESEND } = import.meta.env
+const API = '/api/sendEmail.json'
 
 export default function Asesoria() {
 	const inputStyle =
@@ -20,7 +20,7 @@ export default function Asesoria() {
 		const formData = new FormData(e.currentTarget)
 		const { name, email, message } = Object.fromEntries(formData)
 		try {
-			const res = await fetch(API_RESEND, {
+			const res = await fetch(API, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

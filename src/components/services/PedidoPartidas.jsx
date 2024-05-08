@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../../styles/services.css'
-
-const { API_RESEND } = import.meta.env
+const API = '/api/sendEmail.json.ts'
 
 export default function ServiceForm() {
 	const [sentMessage, setSentMessage] = useState(false)
@@ -26,7 +25,7 @@ export default function ServiceForm() {
 			couple
 		} = Object.fromEntries(formData)
 		try {
-			const res = await fetch(API_RESEND, {
+			const res = await fetch(API, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
