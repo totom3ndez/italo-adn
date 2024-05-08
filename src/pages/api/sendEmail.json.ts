@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro'
 import { Resend } from 'resend'
 
 const resend = new Resend(import.meta.env.API_RESEND)
-export const POST: APIRoute = async ({ params, request }) => {
+export const POST: APIRoute = async ({ request }) => {
 	const body = await request.json()
 	const { to, from, html, subject } = body
 
@@ -13,14 +13,14 @@ export const POST: APIRoute = async ({ params, request }) => {
 		})
 	}
 
-	const send = await resend.emails.send({
-		from,
-		to,
-		subject,
-		html
-	})
+	try {
+		const send = await resend.emails.send({
+			from,
+			to,
+			subject,
+			html
+		})
 
-	if (send.data) {
 		return new Response(
 			JSON.stringify({
 				message: send.data
@@ -30,10 +30,10 @@ export const POST: APIRoute = async ({ params, request }) => {
 				statusText: 'Email sent successfully'
 			}
 		)
-	} else {
+	} catch (err) {
 		return new Response(
 			JSON.stringify({
-				message: send.error
+				message: err.message
 			}),
 			{
 				status: 500,
@@ -41,4 +41,26 @@ export const POST: APIRoute = async ({ params, request }) => {
 			}
 		)
 	}
+
+	// if (send.data) {
+	// 	return new Response(
+	// 		JSON.stringify({
+	// 			message: send.data
+	// 		}),
+	// 		{
+	// 			status: 200,
+	// 			statusText: 'Email sent successfully'
+	// 		}
+	// 	)
+	// } else {
+	// 	return new Response(
+	// 		JSON.stringify({
+	// 			message: send.error
+	// 		}),
+	// 		{
+	// 			status: 500,
+	// 			statusText: 'Internal server error'
+	// 		}
+	// 	)
+	// }
 }
