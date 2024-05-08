@@ -1,6 +1,8 @@
 import '../../styles/services.css'
 import { useState } from 'react'
 
+const { API_RESEND } = import.meta.env
+
 export const Traducciones = () => {
 	const inputStyle =
 		'resize-none rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 my-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
@@ -18,7 +20,7 @@ export const Traducciones = () => {
 		const formData = new FormData(e.currentTarget)
 		const { name, email, number } = Object.fromEntries(formData)
 		try {
-			const res = await fetch(import.meta.env.API_RESEND, {
+			const res = await fetch(API_RESEND, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
