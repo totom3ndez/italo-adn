@@ -26,8 +26,8 @@ export default function Asesoria() {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					to: 'info@italoadn.com',
-					from: 'info@italoadn.com',
+					to: 'italoadn.ok@gmail.com',
+					from: 'italoadn.ok@gmail.com',
 					subject: `Nueva asesoría para ${name}`,
 					html: `
 						<h1>Formulario de Asesoría</h1>
