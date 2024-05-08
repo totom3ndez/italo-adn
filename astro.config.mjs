@@ -8,6 +8,5 @@ import netlify from '@astrojs/netlify'
 export default defineConfig({
 	integrations: [tailwind(), mdx(), react()],
 	output: 'server',
-	site: 'https://totom3ndez.github.io',
 	adapter: netlify()
 })
