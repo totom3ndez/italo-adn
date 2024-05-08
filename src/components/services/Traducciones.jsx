@@ -1,7 +1,7 @@
 import '../../styles/services.css'
 import { useState } from 'react'
 
-const API = '/api/sendEmail.json.ts'
+const API = import.meta.env.API_RESEND
 
 export const Traducciones = () => {
 	const inputStyle =
