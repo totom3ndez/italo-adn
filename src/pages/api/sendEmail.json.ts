@@ -27,7 +27,7 @@ export const POST: APIRoute = async ({ params, request }) => {
 			}),
 			{
 				status: 200,
-				statusText: 'OK'
+				statusText: 'Email sent successfully'
 			}
 		)
 	} else {
