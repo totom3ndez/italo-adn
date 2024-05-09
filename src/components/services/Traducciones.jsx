@@ -2,6 +2,7 @@ import '../../styles/services.css'
 import { useState } from 'react'
 
 const API = '/api/sendEmail.json'
+
 export const Traducciones = () => {
 	const inputStyle =
 		'resize-none rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 my-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
