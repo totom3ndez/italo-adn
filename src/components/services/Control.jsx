@@ -27,7 +27,7 @@ export default function Control() {
 				body: JSON.stringify({
 					to: 'info@italoadn.com',
 					from: 'info@italoadn.com',
-					subject: `Nueva asesoría para ${name}`,
+					subject: `Nuevo control de carpeta para ${name}`,
 					html: `
 						<h1>Formulario de Asesoría</h1>
 						
@@ -97,7 +97,7 @@ export default function Control() {
 				<p>El valor por cada control de acta es de €10.</p>
 			</div>
 			<div className="w-2xl mx-auto py-8">
-				<p>Completa este formulario para solicitar tu asesoría.</p>
+				<p>Completa este formulario para solicitar tu control de carpeta.</p>
 				<form onSubmit={handleSubmit} className="mx-auto w-1/2">
 					<fieldset className={fieldSet}>
 						<legend>Quiero controlar mi carpeta</legend>

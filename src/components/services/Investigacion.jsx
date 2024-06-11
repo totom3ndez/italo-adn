@@ -1,6 +1,58 @@
 import '../../styles/services.css'
+import { useState } from 'react'
+
+const API = '/api/sendEmail.json'
 
 export default function Investigacion() {
+	const inputStyle =
+		'resize-none rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-white py-2 my-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
+
+	const fieldSet = 'border-2 border-black p-4 font-bold'
+
+	const buttonStyle =
+		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
+
+	const [sentMessage, setSentMessage] = useState(false)
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		const form = e.target
+		const formData = new FormData(e.currentTarget)
+		const { name, email, message } = Object.fromEntries(formData)
+		try {
+			const res = await fetch(API, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					to: 'info@italoadn.com',
+					from: 'info@italoadn.com',
+					subject: `Nueva investigación de carpeta para ${name}`,
+					html: `
+						<h1>Formulario de Asesoría</h1>
+						
+						<p>Nombre: ${name}</p>
+						<p>Apellido: ${email}</p>
+						<p>Mensaje: ${message}</p>
+					`
+				})
+			})
+
+			// Notify form sent
+
+			setSentMessage(true)
+			setTimeout(() => {
+				setSentMessage(false)
+			}, 7000)
+
+			// Clear form
+			form.reset()
+		} catch (e) {
+			console.log(e)
+		}
+	}
+
 	return (
 		<>
 			<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
@@ -64,6 +116,43 @@ export default function Investigacion() {
 					Este servicio no implica la solicitud del acta al Comune o la iglesia. Si alguien lo
 					desea, puede solicitarnos el servicio de pedido de acta.
 				</p>
+			</div>
+			<div className="w-2xl mx-auto py-8">
+				<p>Completa este formulario para solicitar investigación.</p>
+				<form onSubmit={handleSubmit} className="mx-auto w-1/2">
+					<fieldset className={fieldSet}>
+						<legend>Quiero iniciar una investigación carpeta</legend>
+						<input
+							className={inputStyle}
+							placeholder="Nombre completo"
+							type="text"
+							name="name"
+							id="name"
+							required
+						/>
+						<input
+							className={inputStyle}
+							placeholder="email"
+							type="email"
+							name="email"
+							id="email"
+							required
+						/>
+						<textarea
+							placeholder="Quiero controlar mi carpeta porque..."
+							className={inputStyle}
+							name="message"
+							id="message"
+							required
+						/>
+					</fieldset>
+					<input type="submit" value="Enviar" className={buttonStyle} />
+					{sentMessage && (
+						<div className="text-center font-bold text-green-600">
+							¡Formulario enviado! Pronto nos pondremos en contacto.
+						</div>
+					)}
+				</form>
 			</div>
 		</>
 	)
