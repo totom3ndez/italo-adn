@@ -45,6 +45,9 @@ export default function SelectInput() {
 		<>
 			<div className="flex flex-col items-center justify-center gap-4">
 				<h2 className="text-center text-2xl md:text-4xl">Servicios</h2>
+				<p className="mx-5 text-center">
+					Selecciona el servicio en el desplegable para ver mas información y formularios.
+				</p>
 				<select
 					onChange={(e) => {
 						setService(e.target.value)
@@ -72,7 +75,7 @@ export default function SelectInput() {
 					($selectedService === 'investigacion' && <Investigacion client:load />) ||
 					($selectedService === 'control' && <Control client:load />) ||
 					($selectedService === 'traduccion' && <Traducciones client:load />) || (
-						<p>Seleccionar servicio</p>
+						<p className="text-center text-2xl">🤌🤌🤌</p>
 					)}
 			</div>
 		</>

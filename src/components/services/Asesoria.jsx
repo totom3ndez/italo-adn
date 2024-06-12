@@ -55,7 +55,7 @@ export default function Asesoria() {
 
 	return (
 		<>
-			<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
+			<div className="mx-5 flex flex-col justify-around gap-4 md:mx-auto md:max-w-4xl md:px-20">
 				<h2 className="titulo">ASESORÍA CIUDADANÍA ITALIANA</h2>
 				<p>
 					Sé que seguramente estás haciendo todo lo posible para tramitar tu ciudadanía italiana y
@@ -97,7 +97,7 @@ export default function Asesoria() {
 				</p>
 				<div className="w-2xl mx-auto py-8">
 					<p>Completa este formulario para solicitar tu asesoría.</p>
-					<form onSubmit={handleSubmit} className="mx-auto w-1/2">
+					<form onSubmit={handleSubmit} className="mx-auto">
 						<fieldset className={fieldSet}>
 							<legend>Quiero mi asesoría</legend>
 							<input

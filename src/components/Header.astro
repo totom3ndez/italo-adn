@@ -1,8 +1,4 @@
 ---
-import Mail from '../components/icons/mail.astro'
-import Whatsapp from '../components/icons/whatsapp.astro'
-import Coffee from '../components/icons/coffee.astro'
-
 // styles
 
 const header_links = 'flex gap-3 hover:text-lightGreen'
@@ -12,27 +8,4 @@ const header_links = 'flex gap-3 hover:text-lightGreen'
 	id="header"
 	class="sticky top-0 z-20 flex grid-cols-3 justify-center gap-6 border-b-2 border-b-white bg-darkGreen p-3 text-[#fff]"
 >
-	<div class="flex gap-2">
-		<a
-			aria-label="Botón para aportar a nuestra pagina web "
-			href="https://cafecito.app/totomendez"
-			rel="noopener"
-			target="_blank"
-			class={header_links}
-		>
-			<Coffee />
-			<span class="hidden md:block">Invítanos un Cafecito</span>
-		</a>
-	</div>
-	<span aria-hidden="true">|</span>
-	<div class="flex gap-2">
-		<a
-			aria-label="Botón para enviarnos un email"
-			href="mailto:info@italoadn.com"
-			class={header_links}
-		>
-			<Mail />
-			<span class="hidden md:block">info@italoadn.com</span>
-		</a>
-	</div>
 </header>

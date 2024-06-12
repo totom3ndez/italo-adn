@@ -54,7 +54,7 @@ export const Traducciones = () => {
 	}
 
 	return (
-		<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
+		<div className=" mx-5 flex flex-col justify-around gap-4 md:mx-auto md:max-w-4xl md:px-20">
 			<h2 className="titulo">Traducciones</h2>
 			<p>
 				Para iniciar el proceso de solicitud de Ciudadanía Italiana en Italia, es imprescindible
@@ -129,46 +129,48 @@ export const Traducciones = () => {
 				Dependerá de algunos factores, pero en principio de 10 A 15 días hábiles desde que recibimos
 				las actas completas.
 			</p>
-			<h3 className="text-center text-lg font-bold">
-				Pedir traducciones rellenando este formulario:
-			</h3>
-			<form onSubmit={handleSubmit} className="mx-auto w-1/2">
-				<fieldset className={fieldSet}>
-					<legend>Quiero traducir mis actas</legend>
-					<input
-						className={inputStyle}
-						placeholder="Nombre completo"
-						type="text"
-						name="name"
-						id="name"
-						required
-					/>
-					<input
-						className={inputStyle}
-						placeholder="email"
-						type="email"
-						name="email"
-						id="email"
-						required
-					/>
-					<input
-						className={inputStyle}
-						type="number"
-						name="number"
-						id="number"
-						required
-						min={1}
-						max={30}
-						placeholder="1"
-					/>
-				</fieldset>
-				<input type="submit" value="Enviar" className={buttonStyle} />
-				{sentMessage && (
-					<div className="text-center font-bold text-green-600">
-						¡Formulario enviado! Pronto nos pondremos en contacto.
-					</div>
-				)}
-			</form>
+			<div className="w-2xl mx-auto py-8">
+				<form onSubmit={handleSubmit} className="mx-auto">
+					<h3 className="text-center text-lg font-bold">
+						Pedir traducciones rellenando este formulario:
+					</h3>
+					<fieldset className={fieldSet}>
+						<legend>Quiero traducir mis actas</legend>
+						<input
+							className={inputStyle}
+							placeholder="Nombre completo"
+							type="text"
+							name="name"
+							id="name"
+							required
+						/>
+						<input
+							className={inputStyle}
+							placeholder="email"
+							type="email"
+							name="email"
+							id="email"
+							required
+						/>
+						<input
+							className={inputStyle}
+							type="number"
+							name="number"
+							id="number"
+							required
+							min={1}
+							max={30}
+							placeholder="1"
+						/>
+					</fieldset>
+					<input type="submit" value="Enviar" className={buttonStyle} />
+					{sentMessage && (
+						<div className="text-center font-bold text-green-600">
+							¡Formulario enviado! Pronto nos pondremos en contacto.
+						</div>
+					)}
+				</form>
+			</div>
 		</div>
 	)
 }

@@ -1,4 +1,6 @@
 ---
+import Mail from '../components/icons/mail.astro'
+import Coffee from '../components/icons/coffee.astro'
 const linkStyle = 'md:hover:text-lightRed text-white uppercase text-xs md:text-md'
 const colStyle = 'blog-links flex flex-col gap-4'
 ---
@@ -18,5 +20,23 @@ const colStyle = 'blog-links flex flex-col gap-4'
 		<a class={linkStyle} href="/about">Quienes somos</a>
 		<a class={linkStyle} href="/services">Servicios</a>
 		<a class={linkStyle} href="/#contact">Contacto</a>
+		<a
+			aria-label="Botón para aportar a nuestra pagina web "
+			href="https://cafecito.app/totomendez"
+			rel="noopener"
+			target="_blank"
+			class="flex gap-2 text-white"
+		>
+			<Coffee />
+			<span class="hidden md:block">Invítanos un Cafecito</span>
+		</a>
+		<a
+			aria-label="Botón para enviarnos un email"
+			href="mailto:info@italoadn.com"
+			class="flex gap-2 text-white"
+		>
+			<Mail />
+			<span class="hidden md:block">info@italoadn.com</span>
+		</a>
 	</div>
 </div>

@@ -55,7 +55,7 @@ export default function Investigacion() {
 
 	return (
 		<>
-			<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
+			<div className="mx-5 flex flex-col justify-around gap-4 md:mx-auto md:max-w-4xl md:px-20">
 				<h2 className="titulo">Servicio de Investigación Genealógica</h2>
 				<p className="px-15 italic opacity-75">
 					Antes que nada, cabe destacar que este tipo de investigación no solo la realizamos con
@@ -118,8 +118,8 @@ export default function Investigacion() {
 				</p>
 			</div>
 			<div className="w-2xl mx-auto py-8">
-				<p>Completa este formulario para solicitar investigación.</p>
-				<form onSubmit={handleSubmit} className="mx-auto w-1/2">
+				<form onSubmit={handleSubmit} className="mx-5 md:mx-auto md:w-1/2">
+					<p>Completa este formulario para solicitar investigación.</p>
 					<fieldset className={fieldSet}>
 						<legend>Quiero iniciar una investigación carpeta</legend>
 						<input

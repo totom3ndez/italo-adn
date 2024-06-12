@@ -27,8 +27,8 @@ import { navLinks } from '../data/data.js'
 		</button>
 		{
 			navLinks.map((link) => (
-				<li class="border border-white p-4 text-center transition-all hover:text-yellow md:rounded-lg md:border-none md:p-2">
-					<a aria-label={link.name} href={link.href} class="">
+				<li class="navlink border border-white p-4 text-center transition-all hover:text-yellow md:rounded-lg md:border-none md:p-2">
+					<a aria-label={link.name} href={link.href}>
 						{link.name}
 					</a>
 				</li>
@@ -50,40 +50,29 @@ import { navLinks } from '../data/data.js'
 	}
 </style>
 <script>
-	const body = document.querySelector('nav')
-	let lastScroll = 1
+	window.onscroll = function () {
+		scrollFunction()
+	}
 
-	window.addEventListener('scroll', () => {
-		const currentScroll = window.scrollY
-		if (currentScroll <= 0) {
-			body.classList.remove('scroll-up')
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById('navbar').style.top = '0'
+		} else {
+			document.getElementById('navbar').style.top = '-50px'
 		}
-		if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
-			body.classList.remove('scroll-up')
-			body.classList.add('scroll-down')
-		}
-		if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
-			body.classList.remove('scroll-down')
-			body.classList.add('scroll-up')
-		}
-
-		lastScroll = currentScroll
-	})
+	}
 
 	const opener = document.querySelector('.opener')
 	const closer = document.querySelector('.closer')
-	const navLink = document.querySelectorAll('.nav-link')
+	const navLink = document.querySelectorAll('.navlink')
+	console.log(navLink)
 	function toggler() {
 		document.querySelector('.nav-links').classList.toggle('hidden')
 	}
 	opener.addEventListener('click', toggler)
 	closer.addEventListener('click', toggler)
 
-	function togglerlink() {
-		document.querySelector('.nav-links').classList.add('hidden')
-	}
-
-	navLink.forEach((item) => {
-		item.addEventListener('click', togglerlink)
+	navLink.forEach((link) => {
+		link.addEventListener('click', toggler)
 	})
 </script>

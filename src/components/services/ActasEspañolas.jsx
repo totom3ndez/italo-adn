@@ -3,7 +3,7 @@ import '../../styles/services.css'
 export default function ActasEspañolas() {
 	return (
 		<>
-			<div className="mx-auto flex flex-col justify-around gap-4 md:max-w-4xl md:px-20">
+			<div className="mx-5 flex flex-col justify-around gap-4 md:mx-auto md:max-w-4xl md:px-20">
 				<h2 className="titulo">ACTAS ESPAÑOLAS</h2>
 				<p>
 					Te ofrecemos gestionar una llamada al Registro Civil o al ayuntamiento español para
