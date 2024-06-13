@@ -26,7 +26,7 @@ export default function SelectInput() {
 			value: 'españolas'
 		},
 		{
-			name: 'Investigación genealogica',
+			name: 'Investigación genealógica',
 			value: 'investigacion'
 		},
 		{

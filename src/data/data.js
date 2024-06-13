@@ -13,7 +13,7 @@ export const navLinks = [
 	},
 	{
 		name: 'Servicios',
-		href: '/services'
+		href: '/servicios'
 	},
 	{
 		name: 'Nosotros',

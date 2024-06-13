@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro'
+const linkStyle = 'md:text-lg text-bold rounded-lg p-2 bg-darkGreen text-white'
+---
+
+<Layout title="Servicios - Italo ADN">
+	<section
+		class="mx-auto flex min-h-screen max-w-[1200px] flex-col gap-3 bg-white py-40 md:text-2xl"
+	>
+		<h2 class="text-center text-xl">Estos son los servicios que tenemos disponibles:</h2>
+		<ul class="mx-auto flex w-3/4 flex-col gap-3 text-center md:w-1/2">
+			<li class={linkStyle}>
+				<a href="/servicios/actas-italianas">Búsqueda de partidas italianas</a>
+			</li>
+			<li class={linkStyle}><a href="/servicios/asesoria">Asesoría personalizada</a></li>
+			<li class={linkStyle}><a href="/servicios/control-carpeta">Control de carpetas</a></li>
+			<li class={linkStyle}><a href="/servicios/investigacion">Investigación genealógica</a></li>
+			<li class={linkStyle}><a href="/servicios/traducciones">Traducciones</a></li>
+			<li class={linkStyle}><a href="/servicios/actas-españolas">Pedido de actas españolas</a></li>
+		</ul>
+	</section>
+</Layout>
+
+<style>
+	fieldset {
+		border: 1px solid black;
+		padding: 20px;
+		width: 100%;
+	}
+</style>
