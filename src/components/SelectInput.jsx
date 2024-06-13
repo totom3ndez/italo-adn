@@ -6,7 +6,7 @@ import Asesoria from './services/Asesoria'
 import ActasEspañolas from './services/ActasEspañolas'
 import Investigacion from './services/Investigacion'
 import Control from './services/Control'
-import { Traducciones } from './services/Traducciones'
+import Traducciones from './services/Traducciones'
 
 export default function SelectInput() {
 	const [service, setService] = useState('')
