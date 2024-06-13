@@ -83,7 +83,7 @@ export default function ServiceForm() {
 
 	return (
 		<>
-			<div className="flex max-w-7xl flex-col justify-around gap-4 md:flex-row md:px-20">
+			<div className="mx-auto flex max-w-7xl flex-col justify-around gap-4 md:flex-row md:px-20">
 				<div className="info px-6 md:max-w-[50%] md:px-0">
 					<h2 className="titulo">Pedido de actas</h2>
 					<p>
