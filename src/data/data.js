@@ -20,7 +20,7 @@ export const navLinks = [
 		href: '/about'
 	},
 	{
-		name: 'Contacto',
+		name: 'Contácto',
 		href: '/#contact'
 	}
 ]
