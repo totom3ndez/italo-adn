@@ -5,7 +5,7 @@ const resend = new Resend(import.meta.env.API_RESEND)
 
 export const POST: APIRoute = async ({ request }) => {
 	const body = await request.json()
-	const { to, from, html, subject } = body
+	const { to, from, html, subject, content, filename } = body
 
 	if (!to || !from || !html || !subject) {
 		return new Response(null, {
@@ -19,7 +19,13 @@ export const POST: APIRoute = async ({ request }) => {
 			from,
 			to,
 			subject,
-			html
+			html,
+			attachments: [
+				{
+					content,
+					filename
+				}
+			]
 		})
 
 		return new Response(
@@ -43,26 +49,4 @@ export const POST: APIRoute = async ({ request }) => {
 			}
 		)
 	}
-
-	// if (send.data) {
-	// 	return new Response(
-	// 		JSON.stringify({
-	// 			message: send.data
-	// 		}),
-	// 		{
-	// 			status: 200,
-	// 			statusText: 'Email sent successfully'
-	// 		}
-	// 	)
-	// } else {
-	// 	return new Response(
-	// 		JSON.stringify({
-	// 			message: send.error
-	// 		}),
-	// 		{
-	// 			status: 500,
-	// 			statusText: 'Internal server error'
-	// 		}
-	// 	)
-	// }
 }

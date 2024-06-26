@@ -1,15 +1,31 @@
 import '../../styles/services.css'
 import { useState } from 'react'
+import * as React from 'react'
 
 const API = '/api/sendEmail.json'
 
 export default function ServiceForm() {
 	const [sentMessage, setSentMessage] = useState(false)
+	const [content, setContent] = React.useState(null)
+	const [filename, setFilename] = React.useState('')
+
+	const onAddFileAction = (e) => {
+		const reader = new FileReader()
+		const files = e.target.files
+
+		reader.onload = (r) => {
+			setContent(r.target.result.toString())
+			setFilename(files[0].name)
+		}
+
+		reader.readAsDataURL(files[0])
+	}
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		const form = e.target
 		const formData = new FormData(e.currentTarget)
+		const base64Content = content.split(',')[1]
 		const {
 			firstName,
 			lastName,
@@ -23,8 +39,10 @@ export default function ServiceForm() {
 			infoAvo,
 			comune,
 			dateMarriage,
-			couple
+			couple,
+			attachments
 		} = Object.fromEntries(formData)
+
 		try {
 			const res = await fetch(API, {
 				method: 'POST',
@@ -55,10 +73,13 @@ export default function ServiceForm() {
 						<p>Fecha de matrimonio: ${dateMarriage}</p>
 						<p>Esposa/o: ${couple}</p>
 
-					`
+					`,
+					content: base64Content,
+					filename
 				})
 			})
 
+			console.log(attachments)
 			// Notify form sent
 
 			setSentMessage(true)
@@ -124,8 +145,40 @@ export default function ServiceForm() {
 						necesario comunicarse con la Diócesis.
 					</p>
 					<p>
-						<b>ENVÍO:</b> También ofrecemos el servicio de enviarte los documentos a Argentina o a
-						donde estés residiendo.
+						<b>El acta está en un Comune (desde 1866-1871 en adelante).</b>
+						<br />
+						Para pedirla, por favor completa tus datos y los de tu AVO. <br />
+						Si necesitas tanto el acta de nacimiento como la de matrimonio, y ambas deben ser
+						emitidas por el mismo Comune, puedes incluir toda la información.
+						<p>
+							Si las actas corresponden al mismo Comune, pero una debe ser emitida por el Comune y
+							la otra por la iglesia, debes hacer dos solicitudes diferentes. El costo del acta
+							incluye el envío a través de correo ordinario.
+						</p>
+						Si prefieres recibirlo por <b>DHL</b>, tendrás que consultar por el servicio de acuerdo
+						a donde te encuentres para enviarlo.
+						<p>
+							<b>IMPORTANTE:</b> Para comenzar la gestión, necesitamos un pago de 30€ como seña, que
+							se descontará del precio final. Por favor, envía el recibo de pago junto con tu
+							solicitud o a <i>info@italoadn.com</i>. Te enviaremos confirmación de tu solicitud.
+							<br />
+							Valor: <b>€90</b>
+						</p>
+					</p>
+					<p>
+						<b>El acta está en una iglesia (anterior a 1866-1871).</b>
+						<br />
+						Para solicitarla, por favor completa tus datos y los de tu AVO. Recibirás un correo
+						electrónico con la confirmación de tu pedido. El costo del acta incluye el envío a
+						través de correo ordinario . Si prefieres recibirlo por DHL, tendrás que consultar por
+						el servicio de acuerdo a donde te encuentres para enviarlo.
+						<p>
+							<b>IMPORTANTE:</b> Para comenzar la gestión, necesitamos un pago de 30€ como seña, que
+							se descontará del precio final. Por favor, envía el recibo de pago junto con tu
+							solicitud o a <i>info@italoadn.com</i>. Te enviaremos confirmación de tu solicitud.
+							<br />
+							Valor: <b>€130</b>
+						</p>
 					</p>
 				</div>
 				<div>
@@ -248,7 +301,7 @@ export default function ServiceForm() {
 							/>
 							<label htmlFor="dateMarriage">Fecha de matrimonio</label>
 							<input className={inputStyle} type="date" name="dateMarriage" id="dateMarriage" />
-							<label htmlFor="couple">Nombre del conyuge</label>
+							<label htmlFor="couple">Nombre del cónyuge</label>
 							<input
 								className={inputStyle}
 								type="text"
@@ -256,6 +309,23 @@ export default function ServiceForm() {
 								id="couple"
 								placeholder="Maria"
 							/>
+						</fieldset>
+						<fieldset className={fieldSet}>
+							<legend>Cargar documentos:</legend>
+							<p>
+								Para cargar documentos, comprimir todos en un archivo <b>.zip o .rar</b>, cambiar el
+								nombre del archivo a su nombre y cargarlo aquí.
+							</p>
+							<label className="flex flex-col gap-2" htmlFor="attachments">
+								<input
+									onChange={onAddFileAction}
+									type="file"
+									name="attachments"
+									id="attachments"
+									multiple="multiple"
+									accept=".rar, .zip"
+								/>
+							</label>
 						</fieldset>
 						<div className="mx-auto flex flex-col">
 							<button className={buttonStyle} type="submit">
