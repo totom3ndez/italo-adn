@@ -20,7 +20,7 @@ const posts = await Astro.glob('./*.mdx')
 						id="blog_card"
 						class="relative mt-4 flex flex-col items-start gap-4  rounded-lg bg-lightGreen object-cover p-4 transition-all hover:bg-darkGreen hover:text-white hover:shadow-lg hover:shadow-slate-950"
 					>
-						<Image
+						<img
 							width={1}
 							height={1}
 							src={post.frontmatter.image.url}
