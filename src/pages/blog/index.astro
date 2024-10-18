@@ -18,7 +18,7 @@ const posts = await Astro.glob('./*.mdx')
 				posts.map((post) => (
 					<div
 						id="blog_card"
-						class="relative mt-4 flex flex-col justify-center gap-4 rounded-lg bg-lightGreen object-cover p-4 transition-all hover:bg-darkGreen hover:text-white hover:shadow-lg hover:shadow-slate-950"
+						class="relative mt-4 flex max-w-64 flex-col justify-center gap-4 rounded-lg bg-lightGreen object-cover p-4 transition-all hover:bg-darkGreen hover:text-white hover:shadow-lg hover:shadow-slate-950"
 					>
 						<img
 							width={1}
