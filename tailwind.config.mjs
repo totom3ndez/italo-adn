@@ -15,7 +15,7 @@ export default {
 				greenWp: '#25D366'
 			},
 			fontFamily: {
-				sans: ['Playpen Sans Variable', ...defaultTheme.fontFamily.sans]
+				sans: ['system-ui', ...defaultTheme.fontFamily.sans]
 			}
 		}
 	},
