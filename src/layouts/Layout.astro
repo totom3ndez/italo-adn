@@ -9,7 +9,6 @@ const { title, action } = Astro.props
 import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '../sections/Copyright.astro'
-import '@fontsource-variable/playpen-sans'
 import Footer from '../sections/Footer.astro'
 ---
 
@@ -22,6 +21,12 @@ import Footer from '../sections/Footer.astro'
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 		<meta name="theme-color" content="#5c6e6c" />
 		<link rel="apple-touch-icon" href="/logo-brand-150x150.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="creator" content="Tomas Mendez" />
 		<meta name="copyright" content="Tomas Mendez" />
 		<meta
@@ -37,14 +42,6 @@ import Footer from '../sections/Footer.astro'
 		<meta name="viewport" content="width=device-width" initial-scale="1.0" />
 		<meta name="”author”" content="Amalia Fernandez y Tomas Mendez" />
 		<link rel="manifest" href="/manifest.json" />
-		<link
-			fetchpriority="high"
-			rel="preload"
-			href="https://cdn.jsdelivr.net/fontsource/fonts/playpen-sans:vf@latest/latin-wght-normal.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/beneficios-ciudadania.webp" />
 		<link fetchpriority="high" rel="preload" as="image" href="/background-1.webp" />
