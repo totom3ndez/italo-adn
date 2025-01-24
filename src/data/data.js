@@ -33,7 +33,7 @@ export const services = [
 		description:
 			'Te guío en el proceso, y ayudo a responder tus dudas. Podemos ajustarlo al horario que más te convenga, ya que es Online.',
 		button: 'Ver más',
-		hrefButton: '/servicios/asesorias'
+		hrefButton: '/servicios/asesoria'
 	},
 	{
 		name: 'Traducciones',
