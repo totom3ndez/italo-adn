@@ -33,21 +33,21 @@ export const services = [
 		description:
 			'Te guío en el proceso, y ayudo a responder tus dudas. Podemos ajustarlo al horario que más te convenga, ya que es Online.',
 		button: 'Ver más',
-		hrefButton: '/servicios'
+		hrefButton: '/servicios/asesorias'
 	},
 	{
 		name: 'Traducciones',
 		description:
 			'Para iniciar el proceso de solicitud de Ciudadanía Italiana en Italia, es imprescindible realizar la traducción de los registros que conforman tu carpeta y que no sean de origen italiano.',
 		button: 'Ver más',
-		hrefButton: '/servicios'
+		hrefButton: '/servicios/traducciones'
 	},
 	{
 		name: 'Solicitud de actas',
 		description:
 			'El primer paso para obtener tu ciudadanía es ubicar los registros de tu antepasado, ¡y	nosotros nos encargamos de eso por vos!',
 		button: 'Ver más',
-		hrefButton: '/servicios'
+		hrefButton: '/servicios/actas-italianas'
 	}
 ]
 
