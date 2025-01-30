@@ -29,7 +29,10 @@ const posts = await Astro.glob('./*.mdx')
 						<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
 						<p class="text-sm">{post.frontmatter.description}</p>
 						<div class="text-center">
-							<a class="text-md absolute -bottom-7 left-5 w-fit" href={post.frontmatter.postUrl}>
+							<a
+								class="text-md absolute -bottom-7 left-5 w-fit"
+								href={post.frontmatter.postUrl}
+							>
 								<Button>Visitar post</Button>
 							</a>
 						</div>
