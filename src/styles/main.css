@@ -10,3 +10,7 @@ button:hover {
 	background-color: #bb7154;
 	color: white;
 }
+
+* {
+	font-family: 'Poppins', syste-ui, sans-serif;
+}
