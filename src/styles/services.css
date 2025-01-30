@@ -9,3 +9,7 @@ p {
 	text-transform: uppercase;
 	text-align: center;
 }
+
+* {
+	font-family: 'Poppins', system-ui, sans-serif;
+}

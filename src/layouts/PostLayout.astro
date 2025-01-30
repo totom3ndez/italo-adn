@@ -1,7 +1,7 @@
 ---
 const { title } = Astro.props
 const { postTitle, image, author, pubDate } = Astro.props.frontmatter || Astro.props
-
+import '@fontsource/poppins'
 import { Image } from 'astro:assets'
 import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
@@ -41,7 +41,10 @@ import Cafecito from '../components/Cafecito.astro'
 			<Cafecito />
 		</div>
 		<Copyright />
-		<style>
+		<style is:global>
+			* {
+				font-family: 'Poppins', system-ui, sans-serif;
+			}
 			body::-webkit-scrollbar {
 				display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 			}
