@@ -39,7 +39,7 @@ import Footer from '../sections/Footer.astro'
 		<ViewTransitions />
 	</head>
 	<body class="bg-darkGreen">
-		<Navbar />
+		<Navbar client:load/>
 		<slot />
 		<Footer />
 		<Copyright />
@@ -56,7 +56,7 @@ import Footer from '../sections/Footer.astro'
 				animation-fill-mode: both;
 				animation-timing-function: alternate-reverse;
 			}
-
+			
 			.animation-top {
 				animation-timeline: view(block 50% 10%);
 				animation-name: fade-top;

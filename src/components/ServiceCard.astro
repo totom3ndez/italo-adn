@@ -1,13 +1,13 @@
 ---
-const { hrefButton, service, details= '', button } = Astro.props
+const { hrefButton, service, details = '', button } = Astro.props
 import Button from './Button.astro'
 ---
 
 <div
-	class="flex flex-col place-items-center align h-[500px] md:h-[550px] w-96 gap-16 rounded-lg bg-lightGreen p-8 text-center shadow-lg"
+	class="align flex h-[500px] w-96 flex-col place-items-center gap-16 rounded-lg p-8 text-center md:h-[550px]"
 >
-	<h1 class="text-2xl font-bold">{service}</h1>
-	<p class="text-lg">{details}</p>
+	<h1 class="text-2xl font-bold text-darkGreen">{service}</h1>
+	<p class="text-lg text-darkGreen">{details}</p>
 	<a target="_blank" class="mx-auto w-fit" no-referrer href={hrefButton}>
 		<Button>{button}</Button>
 	</a>

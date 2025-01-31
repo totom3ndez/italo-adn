@@ -1,7 +1,6 @@
 ---
 import Opener from './icons/opener.astro'
 import Closer from './icons/closer.astro'
-
 import { navLinks } from '../data/data.js'
 ---
 
@@ -10,7 +9,7 @@ import { navLinks } from '../data/data.js'
 	class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 ease-in-out md:justify-center"
 >
 	<a href="/">
-		<img class="h-16 w-16" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
+		<img class="h-24 w-24" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
 	</a>
 	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
 		<Opener />
@@ -36,16 +35,16 @@ import { navLinks } from '../data/data.js'
 		}
 	</ul>
 </nav>
+
 <style>
-
-	.scroll-down {
-		transform: translate(0, -100%);
-	}
-
-	.scroll-up {
+	.active {
+		color: red;
 	}
 </style>
+
 <script>
+	import { useEffect } from 'react'
+
 	const opener = document.querySelector('.opener')
 	const closer = document.querySelector('.closer')
 	const navLink = document.querySelectorAll('.navlink')
