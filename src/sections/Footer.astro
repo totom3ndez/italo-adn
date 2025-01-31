@@ -6,7 +6,8 @@ const colStyle = 'blog-links flex flex-col gap-4'
 ---
 
 <div
-	class="items-top flex max-w-7xl justify-center gap-4 py-20 text-sm md:mx-auto md:flex-row md:justify-around"
+	id="footer"
+	class="items-top flex w-full justify-center gap-4 px-56 py-20 text-sm md:mx-auto md:flex-row md:justify-around"
 >
 	<div class={colStyle}>
 		<a class={linkStyle} href="/blog/paso-a-paso">Ciudadanía italiana</a>
@@ -27,16 +28,22 @@ const colStyle = 'blog-links flex flex-col gap-4'
 			target="_blank"
 			class="flex gap-2 text-white"
 		>
-			<Coffee />
-			<span class="hidden md:block">Invítanos un Cafecito</span>
+		<span class="hidden md:block">Invítanos un Cafecito</span>
+		<Coffee />
 		</a>
 		<a
 			aria-label="Botón para enviarnos un email"
 			href="mailto:info@italoadn.com"
 			class="flex gap-2 text-white"
 		>
-			<Mail />
-			<span class="hidden md:block">info@italoadn.com</span>
+		<span class="hidden md:block">info@italoadn.com</span>
+		<Mail />
 		</a>
 	</div>
 </div>
+
+<style>
+	#footer {
+		box-shadow: 10px 10px 200px #2f4240;
+	}
+</style>
