@@ -43,28 +43,17 @@ import { navLinks } from '../data/data.js'
 </style>
 
 <script>
-	import { useEffect } from 'react'
 
-	useEffect(() => {
-		const opener = document.querySelector('.opener')
-		const closer = document.querySelector('.closer')
-		const navLink = document.querySelectorAll('.navlink')
-		function toggler() {
-			document.querySelector('.nav-links').classList.toggle('hidden')
-		}
-		opener.addEventListener('click', toggler)
-		closer.addEventListener('click', toggler)
+	const opener = document.querySelector('.opener')
+	const closer = document.querySelector('.closer')
+	const navLink = document.querySelectorAll('.navlink')
+	function toggler() {
+		document.querySelector('.nav-links').classList.toggle('hidden')
+	}
+	opener.addEventListener('click', toggler)
+	closer.addEventListener('click', toggler)
 
-		navLink.forEach((link) => {
-			link.addEventListener('click', toggler)
-		})
-
-		return () => {
-			opener.removeEventListener('click', toggler)
-			closer.removeEventListener('click', toggler)
-			navLink.forEach((link) => {
-				link.removeEventListener('click', toggler)
-			})
-		}
-	}, [])
+	navLink.forEach((link) => {
+		link.addEventListener('click', toggler)
+	})
 </script>
