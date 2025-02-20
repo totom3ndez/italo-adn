@@ -1,6 +1,6 @@
 ---
 const { title } = Astro.props
-const { postTitle, image, author, pubDate } = Astro.props.frontmatter || Astro.props
+const { postTitle, image, author, pubDate, postUrl } = Astro.props.frontmatter || Astro.props
 import '@fontsource/poppins'
 import { Image } from 'astro:assets'
 import Navbar from '../components/Navbar.astro'
@@ -17,7 +17,11 @@ import Cafecito from '../components/Cafecito.astro'
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 		<meta name="theme-color" content="#5c6e6c" />
 		<meta name="description" content="Blog de ciudadanía Italiana" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width" initial-scale='1.0'/>
+		<meta property='og:title' content="Italo ADN">
+		<meta property='og:image' content="../../public/logo.webp">
+		<meta property='og:type' content='website'>
+		<meta property='og:url' content=`https://italoadn.com${postUrl}`>
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
 		<meta name="generator" content={Astro.generator} />
