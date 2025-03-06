@@ -1,7 +1,5 @@
 import '../../styles/services.css'
-import { useState } from 'react'
-import * as React from 'react'
-
+import React, { useState } from 'react'
 const API = '/api/sendEmail.json'
 
 export default function ServiceForm() {
