@@ -308,22 +308,20 @@ export default function ServiceForm() {
 								placeholder="Maria"
 							/>
 						</fieldset>
-						<fieldset className={fieldSet}>
+						<fieldset className="border-2 border-black ">
 							<legend>Cargar documentos:</legend>
-							<p>
+							<p className="p-2">
 								Para cargar documentos, comprimir todos en un archivo <b>.zip o .rar</b>, cambiar el
 								nombre del archivo a su nombre y cargarlo aquí.
 							</p>
-							<label className="flex flex-col gap-2" htmlFor="attachments">
-								<input
-									onChange={onAddFileAction}
-									type="file"
-									name="attachments"
-									id="attachments"
-									multiple="multiple"
-									accept=".rar, .zip"
-								/>
-							</label>
+							<input
+								onChange={onAddFileAction}
+								type="file"
+								name="attachments"
+								id="attachments"
+								multiple="multiple"
+								accept=".rar, .zip"
+							/>
 						</fieldset>
 						<div className="mx-auto flex flex-col">
 							<button className={buttonStyle} type="submit">
