@@ -17,22 +17,19 @@ const posts = await Astro.glob('./*.mdx')
 				posts.map((post) => (
 					<div
 						id="blog_card"
-						class="min-h-96 p-3 relative mt-4 max-w-72 justify-center rounded-lg bg-lightGreen transition-all"
+						class="relative mt-4 min-h-96 max-w-72 justify-center rounded-lg bg-lightGreen p-3 transition-all"
 					>
 						<img
 							width={1}
 							height={1}
 							src={post.frontmatter.image.url}
 							alt={post.frontmatter.image.alt}
-							class="mb-5 h-[150px] w-[305px] mt-0"
+							class="mb-5 mt-0 h-[150px] w-[305px] object-cover"
 						/>
 						<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
 						<p class="text-sm">{post.frontmatter.description}</p>
 						<div class="text-center">
-							<a
-								class="text-md absolute bottom-3 right-4 w-fit"
-								href={post.frontmatter.postUrl}
-							>
+							<a class="text-md absolute bottom-3 right-4 w-fit" href={post.frontmatter.postUrl}>
 								<Button>Visitar post</Button>
 							</a>
 						</div>
