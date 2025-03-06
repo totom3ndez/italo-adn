@@ -323,6 +323,7 @@ export default function ServiceForm() {
 									multiple="multiple"
 									accept=".rar, .zip"
 								/>
+								<span>Select a file</span>
 							</label>
 						</fieldset>
 						<div className="mx-auto flex flex-col">
