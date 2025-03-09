@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '../sections/Copyright.astro'
 import Footer from '../sections/Footer.astro'
-import '@fontsource/poppins'
 ---
 
 <!doctype html>
@@ -46,9 +45,6 @@ import '@fontsource/poppins'
 		<Footer />
 		<Copyright />
 		<style is:global>
-			body {
-				font-family: 'Poppins', sans-serif;
-			}
 			body::-webkit-scrollbar {
 				display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 			}
