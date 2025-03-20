@@ -1,11 +1,11 @@
-import '../../styles/services.css'
-import React, { useState } from 'react'
+import '@/styles/services.css'
+import { useState } from 'react'
 const API = '/api/sendEmail.json'
 
 export default function ServiceForm() {
 	const [sentMessage, setSentMessage] = useState(false)
-	const [content, setContent] = React.useState(null)
-	const [filename, setFilename] = React.useState('')
+	const [content, setContent] = useState(null)
+	const [filename, setFilename] = useState('')
 
 	const onAddFileAction = (e) => {
 		const reader = new FileReader()

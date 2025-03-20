@@ -1,10 +1,10 @@
 ---
 const { postTitle, image, author, pubDate, postUrl } = Astro.props.frontmatter || Astro.props
 import { Image } from 'astro:assets'
-import Navbar from '../components/Navbar.astro'
+import Navbar from '@/components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
-import Copyright from '../sections/Copyright.astro'
-import Cafecito from '../components/Cafecito.astro'
+import Copyright from '@/sections/Copyright.astro'
+import Cafecito from '@/components/Cafecito.astro'
 ---
 
 <!doctype html>

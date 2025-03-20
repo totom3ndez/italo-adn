@@ -1,4 +1,4 @@
-import Tree from '../components/icons/tree.astro'
+import Tree from '@/components/icons/tree.astro'
 
 // MENU LINKS
 

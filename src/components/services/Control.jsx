@@ -1,4 +1,4 @@
-import '../../styles/services.css'
+import '@/styles/services.css'
 import React, { useState } from 'react'
 
 const API = '/api/sendEmail.json'

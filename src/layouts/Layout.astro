@@ -9,34 +9,49 @@ import Footer from '../sections/Footer.astro'
 <!doctype html>
 <html lang="es" class="scroll-smooth" data-rh="true">
 	<head>
-		<meta name="robots" content={action} />
+		<!-- Essential Meta Tags First -->
 		<meta charset="UTF-8" />
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-		<meta name="theme-color" content="#5c6e6c" />
-		<link rel="apple-touch-icon" href="/logo-brand-150x150.png" />
-		<meta name="creator" content="Tomas Mendez" />
-		<meta property="og:title" content="Italo ADN" />
-		<meta property="og:image" content="../../public/logo.webp" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://italoadn.com" />
-		<meta name="copyright" content="Tomas Mendez" />
+		<title>{title}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
-			name="keywords"
-			content="ciudadanía,ciudadania,italiana,Italiana,ciudadania en italia,ciudadania italiana,tramite,residencia legal,espacio schenguen, ciudadania italiana en italia, paso a paso ciudadania italiana"
-		/>
-		<meta
-			data-rh="”true”"
-			id="”meta-description”"
 			name="description"
 			content="En Italo ADN te ayudamos a que cumplas tus objetivo de obtener la ciudadanía Italiana, brindándote información en blogs 100% gratuita, servicios económicos y herramientas."
 		/>
-		<meta name="viewport" content="width=device-width" initial-scale="1.0" />
-		<meta name="”author”" content="Amalia Fernandez y Tomas Mendez" />
-		<link rel="manifest" href="/manifest.json" />
+		<meta name="robots" content={action} />
+
+		<!-- Favicons and Theme Colors -->
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
+		<link rel="apple-touch-icon" href="/logo-brand-150x150.png" />
+		<meta name="theme-color" content="#5c6e6c" />
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+
+		<!-- Open Graph Tags -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://italoadn.com" />
+		<meta property="og:title" content="Italo ADN" />
+		<meta
+			property="og:description"
+			content="En Italo ADN te ayudamos a que cumplas tus objetivo de obtener la ciudadanía Italiana, brindándote información en blogs 100% gratuita, servicios económicos y herramientas."
+		/>
+		<meta property="og:image" content="/logo.webp" />
+
+		<!-- Author and Copyright Information -->
+		<meta name="author" content="Amalia Fernandez y Tomas Mendez" />
+		<meta name="creator" content="Tomas Mendez" />
+		<meta name="copyright" content="Tomas Mendez" />
+
+		<!-- Keywords -->
+		<meta
+			name="keywords"
+			content="ciudadanía,ciudadania,italiana,Italiana,ciudadania en italia,ciudadania italiana,tramite,residencia legal,espacio schenguen,ciudadania italiana en italia,paso a paso ciudadania italiana"
+		/>
+
+		<!-- PWA Support -->
+		<link rel="manifest" href="/manifest.json" />
+
+		<!-- Generator Info -->
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 		<ViewTransitions />
 	</head>
 	<body class="bg-darkGreen">

@@ -1,7 +1,7 @@
 ---
 import Opener from './icons/opener.astro'
 import Closer from './icons/closer.astro'
-import { navLinks } from '../data/data.js'
+import { navLinks } from '@/data/data.js'
 ---
 
 <nav
@@ -43,7 +43,6 @@ import { navLinks } from '../data/data.js'
 </style>
 
 <script>
-
 	const opener = document.querySelector('.opener')
 	const closer = document.querySelector('.closer')
 	const navLink = document.querySelectorAll('.navlink')

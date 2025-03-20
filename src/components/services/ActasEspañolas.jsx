@@ -1,4 +1,4 @@
-import '../../styles/services.css'
+import '@/styles/services.css'
 
 export default function ActasEspañolas() {
 	return (
