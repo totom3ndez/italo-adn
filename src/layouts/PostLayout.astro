@@ -5,6 +5,11 @@ import Navbar from '@/components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '@/sections/Copyright.astro'
 import Cafecito from '@/components/Cafecito.astro'
+
+import '@fontsource/poppins/200.css'
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/poppins/800.css'
 ---
 
 <!doctype html>
@@ -44,8 +49,8 @@ import Cafecito from '@/components/Cafecito.astro'
 		</div>
 		<Copyright />
 		<style is:global>
-			html {
-				font-family: 'Poppins', system-ui, sans-serif;
+			body {
+				font-family: 'Poppins', sans-serif;
 			}
 			body::-webkit-scrollbar {
 				display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
