@@ -10,11 +10,14 @@ const { post } = Astro.props
 	>
 		<Image
 			width={300}
-			height={1}
+			height={200}
+			sizes="390px"
 			src={post.frontmatter.image.url}
 			alt={post.frontmatter.image.alt}
 			class="mb-5 mt-0 h-[150px] w-[305px] object-cover"
-			loading="eager"
+			loading="lazy"
+			quality={80}
+			format="webp"
 		/>
 		<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
 		<p class="text-sm">{post.frontmatter.description}</p>
