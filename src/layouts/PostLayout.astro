@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '@/sections/Copyright.astro'
 import Cafecito from '@/components/Cafecito.astro'
-import './global.css'
+import '@/styles/global.css'
 ---
 
 <!doctype html>
@@ -20,10 +20,10 @@ import './global.css'
 		<meta property="og:title" content="Italo ADN" />
 		<meta property="og:image" content="../../public/logo.webp" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content=`https://italoadn.com${postUrl}` />
+		<meta property="og:url" content={`https://italoadn.com${postUrl}`} />
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
-		<link rel="preload" href="/global.css" as="style" />
+		<link rel="preload" href="/src/styles/global.css" as="style" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{postTitle}</title>
 		<ViewTransitions />

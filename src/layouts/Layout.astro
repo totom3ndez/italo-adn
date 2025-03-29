@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Copyright from '../sections/Copyright.astro'
 import Footer from '../sections/Footer.astro'
-import './global.css'
+import '@/styles/global.css'
 ---
 
 <!doctype html>
@@ -23,7 +23,7 @@ import './global.css'
 		<!-- Favicons and Theme Colors -->
 		<link rel="icon" type="image/svg+xml" href="/logo-white.webp" />
 		<link rel="apple-touch-icon" href="/logo-brand-150x150.png" />
-		<link rel="preload" href="/global.css" as="style" />
+		<link rel="preload" href="/src/styles/global.css" as="style" />
 		<meta name="theme-color" content="#5c6e6c" />
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
