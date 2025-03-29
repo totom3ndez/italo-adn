@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets'
+const { post } = Astro.props
+---
+
+<a class="h-full" href={post.frontmatter.postUrl}>
+	<div
+		id="blog_card"
+		class="mt-4 flex h-full max-w-72 flex-col gap-4 rounded-lg bg-lightGreen object-cover p-4"
+	>
+		<Image
+			width={300}
+			height={1}
+			src={post.frontmatter.image.url}
+			alt={post.frontmatter.image.alt}
+			class="mb-5 mt-0 h-[150px] w-[305px] object-cover"
+			loading="eager"
+		/>
+		<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
+		<p class="text-sm">{post.frontmatter.description}</p>
+	</div>
+</a>
