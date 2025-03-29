@@ -1,7 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Button from '../../components/Button.astro'
+import { Image } from 'astro:assets'
 const posts = await Astro.glob('./*.mdx')
+
+const normalizedDates = (date) => {
+	return date.replace(/-/g, '/').split('/').reverse().join('-')
+}
+
+const sortedPosts = posts.sort((a, b) => {
+	const dateA = new Date(normalizedDates(a.frontmatter.pubDate)).getTime()
+	const dateB = new Date(normalizedDates(b.frontmatter.pubDate)).getTime()
+	return dateB - dateA
+})
 ---
 
 <Layout title="Blog - Italo ADN">
@@ -14,17 +25,18 @@ const posts = await Astro.glob('./*.mdx')
 			class="grid max-w-6xl grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-4"
 		>
 			{
-				posts.map((post) => (
+				sortedPosts.map((post) => (
 					<div
 						id="blog_card"
 						class="relative mt-4 min-h-96 max-w-72 justify-center rounded-lg bg-lightGreen p-3 transition-all"
 					>
-						<img
-							width={1}
+						<Image
+							width={300}
 							height={1}
 							src={post.frontmatter.image.url}
 							alt={post.frontmatter.image.alt}
 							class="mb-5 mt-0 h-[150px] w-[305px] object-cover"
+							loading="eager"
 						/>
 						<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
 						<p class="text-sm">{post.frontmatter.description}</p>
