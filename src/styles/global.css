@@ -3,28 +3,24 @@
   src: url(/fonts/poppins-regular-webfont.woff2);
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   src: url(/fonts/poppins-light-webfont.woff2);
   font-weight: light;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   src: url(/fonts/poppins-bold-webfont.woff2);
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   src: url(/fonts/poppins-medium-webfont.woff2);
   font-weight: medium;
   font-style: normal;
-  font-display: swap;
 }
 
 body {
