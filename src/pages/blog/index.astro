@@ -41,10 +41,10 @@ const sortedPosts = posts.sort((a, b) => {
 							quality={80}
 							format="webp"
 						/>
-						<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
-						<p class="text-sm">{post.frontmatter.description}</p>
+						<h4 class="font-semibold">{post.frontmatter.postTitle}</h4>
+						<p>{post.frontmatter.description}</p>
 						<div class="text-center">
-							<a class="text-md absolute bottom-3 right-4 w-fit" href={post.frontmatter.postUrl}>
+							<a class="absolute bottom-3 right-4 w-fit" href={post.frontmatter.postUrl}>
 								<Button>Visitar post</Button>
 							</a>
 						</div>

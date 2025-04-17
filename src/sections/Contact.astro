@@ -8,10 +8,8 @@ const inputStyle =
 		class="animation-top z-auto mx-auto flex w-full max-w-lg flex-col gap-3 rounded-lg border-none bg-lightGreen p-10 text-white shadow-2xl"
 	>
 		<div class="mb-5 rounded-lg p-3 text-black">
-			<p class="mb-2 text-center text-xl font-bold uppercase underline underline-offset-4">
-				Contacto
-			</p>
-			<p class="text-md text-center md:text-lg">
+			<p class="mb-2 text-center font-bold uppercase underline underline-offset-4">Contacto</p>
+			<p class="text-center">
 				Utilizá este formulario para despejar cualquier duda que tengas. Nos pondremos en contacto a
 				la brevedad.
 			</p>
@@ -37,7 +35,7 @@ const inputStyle =
 					class={inputStyle}
 					name="name"
 				/>
-				<div class="empty-feedback invalid-feedback mt-1 text-sm text-red-400">
+				<div class="empty-feedback invalid-feedback mt-1 text-red-400">
 					Por favor escribe tu nombre completo.
 				</div>
 			</div>
@@ -50,10 +48,8 @@ const inputStyle =
 					required
 					class={inputStyle}
 				/>
-				<div class="empty-feedback mt-1 text-sm text-red-400">Por favor escribe tu email.</div>
-				<div class="invalid-feedback mt-1 text-sm text-red-400">
-					Por favor escribe un email correcto.
-				</div>
+				<div class="empty-feedback mt-1 text-red-400">Por favor escribe tu email.</div>
+				<div class="invalid-feedback mt-1 text-red-400">Por favor escribe un email correcto.</div>
 			</div>
 			<div class="flex flex-col place-content-center">
 				<textarea
@@ -61,13 +57,13 @@ const inputStyle =
 					required
 					placeholder="Tu mensaje"
 					class:list={[inputStyle, 'h-[150px] resize-none']}></textarea>
-				<div class="empty-feedback invalid-feedback mt-1 text-sm text-red-400">
+				<div class="empty-feedback invalid-feedback mt-1 text-red-400">
 					Por favor escribe tu mensaje.
 				</div>
 			</div>
 			<button
 				type="submit"
-				class="mx-auto w-full rounded-full bg-yellow px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-gray-700 hover:text-white focus:ring-gray-700"
+				class="mx-auto w-full rounded-full bg-yellow px-5 py-2.5 text-center font-medium text-black hover:bg-gray-700 hover:text-white focus:ring-gray-700"
 				>Enviar</button
 			>
 			<div id="result" class="mt-3 text-center"></div>

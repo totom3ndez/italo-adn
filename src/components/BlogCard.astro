@@ -19,7 +19,7 @@ const { post } = Astro.props
 			quality={80}
 			format="webp"
 		/>
-		<h4 class="text-lg font-semibold">{post.frontmatter.postTitle}</h4>
-		<p class="text-sm">{post.frontmatter.description}</p>
+		<h4 class="font-semibold">{post.frontmatter.postTitle}</h4>
+		<p>{post.frontmatter.description}</p>
 	</div>
 </a>

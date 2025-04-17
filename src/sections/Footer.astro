@@ -1,13 +1,13 @@
 ---
 import Mail from '../components/icons/mail.astro'
 import Coffee from '../components/icons/coffee.astro'
-const linkStyle = 'md:hover:text-lightRed text-white uppercase text-xs md:text-md'
+const linkStyle = 'md:hover:text-lightRed text-white uppercase text-xs'
 const colStyle = 'blog-links flex flex-col gap-4'
 ---
 
 <div
 	id="footer"
-	class="items-top flex justify-center gap-4 py-20 text-sm md:mx-auto md:justify-around md:px-96"
+	class="items-top flex justify-center gap-4 py-20 md:mx-auto md:justify-around md:px-96"
 >
 	<div class={colStyle}>
 		<a class={linkStyle} href="/blog/paso-a-paso">Ciudadanía italiana</a>
@@ -28,16 +28,16 @@ const colStyle = 'blog-links flex flex-col gap-4'
 			target="_blank"
 			class="flex gap-2 text-white"
 		>
-		<span class="hidden md:block">Invítanos un Cafecito</span>
-		<Coffee />
+			<span class="hidden md:block">Invítanos un Cafecito</span>
+			<Coffee />
 		</a>
 		<a
 			aria-label="Botón para enviarnos un email"
 			href="mailto:info@italoadn.com"
 			class="flex gap-2 text-white"
 		>
-		<span class="hidden md:block">info@italoadn.com</span>
-		<Mail />
+			<span class="hidden md:block">info@italoadn.com</span>
+			<Mail />
 		</a>
 	</div>
 </div>
