@@ -10,7 +10,7 @@ export default function Traducciones() {
 	const fieldSet = 'border-2 border-black p-4 font-bold'
 
 	const buttonStyle =
-		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
+		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
 
 	const [sentMessage, setSentMessage] = useState(false)
 
@@ -131,7 +131,7 @@ export default function Traducciones() {
 			</p>
 			<div className="w-2xl mx-auto py-8">
 				<form onSubmit={handleSubmit} className="mx-auto">
-					<h3 className="text-center text-lg font-bold">
+					<h3 className="text-center font-bold">
 						Pedir traducciones rellenando este formulario:
 					</h3>
 					<fieldset className={fieldSet}>

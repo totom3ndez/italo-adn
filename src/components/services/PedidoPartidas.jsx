@@ -93,7 +93,7 @@ export default function ServiceForm() {
 	}
 
 	const buttonStyle =
-		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
+		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
 
 	const inputStyle =
 		'resize-none rounded-lg w-full placeholder:italic placeholder:opacity-50 rounded-md border border-lightGreen bg-slate-100 py-2 my-2 px-4 text-base font-medium text-black outline-none focus:border-lightRed focus:shadow-md'
@@ -180,7 +180,7 @@ export default function ServiceForm() {
 					</p>
 				</div>
 				<div>
-					<h2 className="text-center text-lg font-bold">Formulario para el pedido de Actas</h2>
+					<h2 className="text-center font-bold">Formulario para el pedido de Actas</h2>
 					<form
 						onSubmit={handleSubmit}
 						className="mx-auto mb-4 flex w-full max-w-lg flex-wrap rounded px-8 pb-8 pt-6 shadow-md"

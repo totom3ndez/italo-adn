@@ -10,7 +10,7 @@ export default function Investigacion() {
 	const fieldSet = 'border-2 border-black p-4 font-bold'
 
 	const buttonStyle =
-		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
+		'my-2 w-full rounded-full bg-gray-700 px-5 py-2.5 text-center font-medium text-white hover:bg-yellow hover:text-black focus:ring-gray-700'
 
 	const [sentMessage, setSentMessage] = useState(false)
 
