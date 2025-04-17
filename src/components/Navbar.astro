@@ -4,36 +4,31 @@ import Closer from './icons/closer.astro'
 import { navLinks } from '@/data/data.js'
 ---
 
-<nav
-	transition:persist
-	class="fixed left-0 right-0 top-0 z-50 flex items-center justify-between gap-12 bg-darkGreen p-4 px-10 ease-in-out md:justify-center"
->
-	<a href="/">
-		<img class="h-24 w-24" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
-	</a>
-	<button class="opener rounded-lg p-2 hover:bg-lightGreen md:hidden" aria-label="Menu Opener">
-		<Opener />
-	</button>
-	<ul
-		aria-label="Menu navegador"
-		class:list={[
-			'nav-links align-center absolute right-0 top-6 z-20 hidden w-1/2 flex-col justify-center bg-darkGreen text-[#fff] transition ease-in-out',
-			'md:static md:flex md:w-auto md:flex-row md:gap-12 md:opacity-100'
-		]}
-	>
-		<li class="grid place-content-end hover:cursor-default" aria-label="Menu closer">
-			<Closer />
-		</li>
-		{
-			navLinks.map((link) => (
-				<li class="navlink text-1xl border border-white p-4 text-center transition-all hover:text-yellow md:rounded-lg md:border-none md:p-2 md:text-lg">
-					<a aria-label={link.name} href={link.href}>
-						{link.name}
-					</a>
-				</li>
-			))
-		}
-	</ul>
+<nav transition:persist class="fixed top-0 z-50 w-full bg-darkGreen p-4">
+	<div class="mx-auto flex max-w-6xl items-center justify-between">
+		<a href="/">
+			<img class="h-24" src="/logo-brand-150x150.png" alt="Logo de Italo ADN" />
+		</a>
+
+		<button class="opener p-2 hover:bg-lightGreen md:hidden" aria-label="Menu">
+			<Opener />
+		</button>
+
+		<ul
+			class="nav-links absolute right-0 top-24 hidden w-1/2 bg-darkGreen md:static md:top-0 md:flex md:w-auto md:gap-8"
+		>
+			<li class="p-4 text-right md:hidden">
+				<Closer />
+			</li>
+			{
+				navLinks.map((link) => (
+					<li class="navlink p-4 text-center text-white hover:text-yellow md:p-2">
+						<a href={link.href}>{link.name}</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
 </nav>
 
 <style>
